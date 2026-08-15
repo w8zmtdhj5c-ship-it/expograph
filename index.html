@@ -1,25 +1,52 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>ExpoGraph | Coming Soon</title>
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
-    <meta name="description"
-          content="ExpoGraph — Impression, publicité, design graphique et communication digitale. Notre nouveau site arrive bientôt.">
+    <meta
+        name="description"
+        content="ExpoGraph — Impression, publicité, design graphique et communication digitale."
+    >
+
+    <meta
+        name="theme-color"
+        content="#2878e8"
+    >
+
+    <title>ExpoGraph — Coming Soon</title>
+
+
+    <!-- =====================================================
+         GOOGLE FONT
+    ====================================================== -->
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
-          rel="stylesheet">
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <!-- =====================================================
+         CSS
+    ====================================================== -->
 
     <style>
 
-        /* =====================================================
+        /* ==================================================
            RESET
-        ===================================================== */
+        ================================================== */
 
         * {
             margin: 0;
@@ -27,743 +54,1262 @@
             box-sizing: border-box;
         }
 
+
+        /* ==================================================
+           VARIABLES
+        ================================================== */
+
         :root {
+
             --blue: #2878e8;
             --blue-dark: #1761c5;
             --blue-light: #8fb9e8;
+
             --text: #101828;
             --muted: #667085;
-            --light: #f7faff;
+
             --white: #ffffff;
+            --light: #f7faff;
+
             --border: rgba(40, 120, 232, 0.12);
+
         }
+
+
+        /* ==================================================
+           BODY
+        ================================================== */
 
         html {
             scroll-behavior: smooth;
         }
 
         body {
-            font-family: "Inter", sans-serif;
-            background: var(--white);
+
+            font-family: "Inter", Arial, sans-serif;
+
+            background: #ffffff;
+
             color: var(--text);
+
             min-height: 100vh;
+
             overflow-x: hidden;
+
         }
 
 
-        /* =====================================================
+        /* ==================================================
            BACKGROUND
-        ===================================================== */
+        ================================================== */
 
         .background {
+
             position: fixed;
+
             inset: 0;
-            z-index: -2;
+
+            z-index: -10;
+
             overflow: hidden;
+
             background:
+
                 radial-gradient(
                     circle at 10% 20%,
-                    rgba(40, 120, 232, 0.08),
+                    rgba(40,120,232,0.08),
                     transparent 30%
                 ),
+
                 radial-gradient(
                     circle at 90% 80%,
-                    rgba(143, 185, 232, 0.12),
+                    rgba(143,185,232,0.12),
                     transparent 30%
                 ),
+
                 #ffffff;
+
         }
 
-        .shape {
+
+        /* ==================================================
+           DECORATIVE CIRCLES
+        ================================================== */
+
+        .circle {
+
             position: absolute;
+
             border-radius: 50%;
-            filter: blur(1px);
+
+            border: 1px solid
+                rgba(40,120,232,0.08);
+
             pointer-events: none;
-        }
 
-        .shape-one {
-            width: 420px;
-            height: 420px;
-            border: 1px solid rgba(40, 120, 232, 0.08);
-            top: -220px;
-            right: -150px;
-            animation: rotate 25s linear infinite;
-        }
-
-        .shape-two {
-            width: 300px;
-            height: 300px;
-            border: 1px solid rgba(40, 120, 232, 0.07);
-            bottom: -180px;
-            left: -140px;
-            animation: rotateReverse 30s linear infinite;
-        }
-
-        .dot-pattern {
-            position: absolute;
-            width: 250px;
-            height: 250px;
-            right: 5%;
-            top: 15%;
-
-            background-image: radial-gradient(
-                rgba(40, 120, 232, 0.18) 1px,
-                transparent 1px
-            );
-
-            background-size: 15px 15px;
-            opacity: 0.35;
         }
 
 
-        /* =====================================================
-           HEADER
-        ===================================================== */
+        .circle-one {
 
-        header {
-            width: 100%;
-            padding: 30px 6%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+            width: 500px;
+            height: 500px;
 
-        .mini-logo {
-            width: 145px;
-        }
-
-        .mini-logo img {
-            width: 100%;
-            display: block;
-        }
-
-        .header-status {
-            display: flex;
-            align-items: center;
-            gap: 9px;
-
-            font-size: 12px;
-            font-weight: 600;
-            color: var(--muted);
-            letter-spacing: 0.8px;
-            text-transform: uppercase;
-        }
-
-        .status-dot {
-            width: 8px;
-            height: 8px;
-            background: var(--blue);
-            border-radius: 50%;
-            box-shadow: 0 0 0 5px rgba(40, 120, 232, 0.10);
-            animation: pulse 2s infinite;
-        }
-
-
-        /* =====================================================
-           HERO
-        ===================================================== */
-
-        main {
-            min-height: calc(100vh - 100px);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 30px 20px 80px;
-        }
-
-        .hero {
-            width: min(1100px, 100%);
-            text-align: center;
-        }
-
-
-        /* =====================================================
-           MAIN LOGO
-        ===================================================== */
-
-        .main-logo {
-            width: min(330px, 70vw);
-            margin: 0 auto 38px;
+            top: -280px;
+            right: -180px;
 
             animation:
-                logoAppear 1.1s ease forwards,
-                floating 5s ease-in-out 1.2s infinite;
+                rotate 25s linear infinite;
+
         }
 
-        .main-logo img {
+
+        .circle-two {
+
+            width: 350px;
+            height: 350px;
+
+            bottom: -220px;
+            left: -180px;
+
+            animation:
+                rotate-reverse 30s linear infinite;
+
+        }
+
+
+        /* ==================================================
+           DOT PATTERN
+        ================================================== */
+
+        .dots {
+
+            position: absolute;
+
+            width: 230px;
+            height: 230px;
+
+            right: 5%;
+            top: 17%;
+
+            background-image:
+
+                radial-gradient(
+                    rgba(40,120,232,0.18) 1px,
+                    transparent 1px
+                );
+
+            background-size: 15px 15px;
+
+            opacity: 0.35;
+
+        }
+
+
+        /* ==================================================
+           HEADER
+        ================================================== */
+
+        header {
+
             width: 100%;
-            height: auto;
-            display: block;
+
+            padding: 28px 6%;
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
         }
 
 
-        /* =====================================================
-           BADGE
-        ===================================================== */
+        /* ==================================================
+           SMALL LOGO
+        ================================================== */
 
-        .badge {
-            display: inline-flex;
+        .header-logo {
+
+            width: 145px;
+
+        }
+
+
+        .header-logo img {
+
+            width: 100%;
+
+            height: auto;
+
+            display: block;
+
+        }
+
+
+        /* ==================================================
+           STATUS
+        ================================================== */
+
+        .status {
+
+            display: flex;
+
             align-items: center;
+
             gap: 9px;
 
-            padding: 10px 18px;
+            color: var(--muted);
 
-            border: 1px solid var(--border);
-            background: rgba(255,255,255,0.85);
+            font-size: 11px;
+
+            font-weight: 600;
+
+            letter-spacing: 1px;
+
+            text-transform: uppercase;
+
+        }
+
+
+        .status-dot {
+
+            width: 8px;
+
+            height: 8px;
+
+            border-radius: 50%;
+
+            background: var(--blue);
+
+            box-shadow:
+                0 0 0 5px
+                rgba(40,120,232,0.10);
+
+            animation: pulse 2s infinite;
+
+        }
+
+
+        /* ==================================================
+           MAIN
+        ================================================== */
+
+        main {
+
+            min-height:
+                calc(100vh - 95px);
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            padding:
+                30px
+                20px
+                100px;
+
+        }
+
+
+        .hero {
+
+            width: min(1050px, 100%);
+
+            text-align: center;
+
+        }
+
+
+        /* ==================================================
+           MAIN LOGO
+        ================================================== */
+
+        .main-logo {
+
+            width: 340px;
+
+            max-width: 75vw;
+
+            margin:
+                0 auto
+                35px;
+
+            animation:
+                logo-appear 1s ease forwards;
+
+        }
+
+
+        .main-logo img {
+
+            width: 100%;
+
+            height: auto;
+
+            display: block;
+
+            object-fit: contain;
+
+        }
+
+
+        /* ==================================================
+           BADGE
+        ================================================== */
+
+        .badge {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 9px;
+
+            padding:
+                10px
+                18px;
+
+            border:
+                1px solid var(--border);
+
+            background:
+                rgba(255,255,255,0.90);
 
             border-radius: 50px;
 
             color: var(--blue);
-            font-size: 11px;
+
+            font-size: 10px;
+
             font-weight: 700;
 
             letter-spacing: 2px;
+
             text-transform: uppercase;
 
-            box-shadow: 0 8px 30px rgba(16, 24, 40, 0.05);
+            box-shadow:
+                0 8px 30px
+                rgba(16,24,40,0.05);
 
-            animation: fadeUp 0.9s ease 0.2s both;
+            animation:
+                fade-up 1s ease
+                0.15s both;
+
         }
 
-        .badge-line {
+
+        .badge-dot {
+
             width: 6px;
+
             height: 6px;
+
             border-radius: 50%;
+
             background: var(--blue);
+
         }
 
 
-        /* =====================================================
+        /* ==================================================
            TITLE
-        ===================================================== */
+        ================================================== */
 
         h1 {
+
             margin-top: 25px;
 
-            font-size: clamp(45px, 7vw, 90px);
+            font-size:
+                clamp(48px, 7vw, 90px);
+
             line-height: 0.98;
 
             font-weight: 800;
+
             letter-spacing: -4px;
 
             color: var(--text);
 
-            animation: fadeUp 1s ease 0.35s both;
+            animation:
+                fade-up 1s ease
+                0.3s both;
+
         }
+
 
         h1 span {
+
             color: var(--blue);
+
         }
 
 
-        /* =====================================================
+        /* ==================================================
            DESCRIPTION
-        ===================================================== */
+        ================================================== */
 
         .description {
-            width: min(650px, 100%);
-            margin: 27px auto 0;
 
-            font-size: 16px;
-            line-height: 1.8;
+            width:
+                min(650px, 100%);
+
+            margin:
+                25px auto 0;
 
             color: var(--muted);
 
-            animation: fadeUp 1s ease 0.5s both;
+            font-size: 15px;
+
+            line-height: 1.8;
+
+            animation:
+                fade-up 1s ease
+                0.45s both;
+
         }
 
 
-        /* =====================================================
+        /* ==================================================
            SERVICES
-        ===================================================== */
+        ================================================== */
 
         .services {
-            margin: 35px auto 0;
 
             display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 10px;
 
-            animation: fadeUp 1s ease 0.65s both;
+            justify-content: center;
+
+            align-items: center;
+
+            flex-wrap: wrap;
+
+            gap: 9px;
+
+            margin-top: 28px;
+
+            animation:
+                fade-up 1s ease
+                0.6s both;
+
         }
 
-        .service {
-            padding: 9px 14px;
 
-            background: rgba(40, 120, 232, 0.055);
-            border: 1px solid rgba(40, 120, 232, 0.09);
+        .service {
+
+            padding:
+                9px
+                14px;
+
+            border:
+                1px solid
+                rgba(40,120,232,0.09);
+
+            background:
+                rgba(40,120,232,0.05);
 
             border-radius: 8px;
 
             color: #4778ae;
 
-            font-size: 11px;
+            font-size: 10px;
+
             font-weight: 600;
 
-            letter-spacing: 0.5px;
         }
 
 
-        /* =====================================================
+        /* ==================================================
            COUNTDOWN
-        ===================================================== */
+        ================================================== */
 
         .countdown {
+
             display: flex;
+
             justify-content: center;
+
             gap: 13px;
 
-            margin: 42px auto 0;
+            margin-top: 40px;
 
-            animation: fadeUp 1s ease 0.8s both;
+            animation:
+                fade-up 1s ease
+                0.75s both;
+
         }
 
-        .time {
+
+        .countdown-box {
+
             width: 90px;
+
             min-height: 90px;
 
             display: flex;
+
             flex-direction: column;
+
             justify-content: center;
+
             align-items: center;
 
-            background: rgba(255,255,255,0.85);
+            background:
+                rgba(255,255,255,0.92);
 
-            border: 1px solid var(--border);
+            border:
+                1px solid var(--border);
 
             border-radius: 16px;
 
             box-shadow:
-                0 12px 35px rgba(16, 24, 40, 0.06);
+                0 12px 35px
+                rgba(16,24,40,0.06);
 
-            transition: 0.3s ease;
+            transition:
+                0.3s ease;
+
         }
 
-        .time:hover {
-            transform: translateY(-5px);
-            border-color: rgba(40, 120, 232, 0.25);
+
+        .countdown-box:hover {
+
+            transform:
+                translateY(-5px);
+
+            border-color:
+                rgba(40,120,232,0.25);
+
             box-shadow:
-                0 18px 40px rgba(40, 120, 232, 0.10);
+                0 18px 40px
+                rgba(40,120,232,0.10);
+
         }
 
-        .time strong {
+
+        .countdown-number {
+
             font-size: 27px;
+
             font-weight: 700;
+
             color: var(--text);
+
         }
 
-        .time span {
+
+        .countdown-label {
+
             margin-top: 5px;
 
             color: var(--blue);
 
             font-size: 9px;
+
             font-weight: 700;
 
             letter-spacing: 1.5px;
+
             text-transform: uppercase;
+
         }
 
 
-        /* =====================================================
+        /* ==================================================
            BUTTONS
-        ===================================================== */
+        ================================================== */
 
         .buttons {
-            margin-top: 38px;
 
             display: flex;
+
             justify-content: center;
+
             align-items: center;
+
             gap: 12px;
 
-            animation: fadeUp 1s ease 0.95s both;
+            margin-top: 38px;
+
+            animation:
+                fade-up 1s ease
+                0.9s both;
+
         }
 
+
         .button {
+
             min-width: 170px;
 
-            display: inline-flex;
-            justify-content: center;
-            align-items: center;
+            padding:
+                14px
+                22px;
 
-            padding: 14px 22px;
+            display: inline-flex;
+
+            justify-content: center;
+
+            align-items: center;
 
             border-radius: 10px;
 
             text-decoration: none;
 
-            font-size: 13px;
+            font-size: 12px;
+
             font-weight: 700;
 
-            transition: all 0.3s ease;
+            transition:
+                all 0.3s ease;
+
         }
+
+
+        /* PRIMARY */
 
         .button-primary {
-            color: white;
 
-            background: var(--blue);
+            color: #ffffff;
+
+            background:
+                var(--blue);
 
             box-shadow:
-                0 10px 25px rgba(40, 120, 232, 0.22);
+                0 10px 25px
+                rgba(40,120,232,0.22);
+
         }
+
 
         .button-primary:hover {
-            background: var(--blue-dark);
-            transform: translateY(-3px);
+
+            background:
+                var(--blue-dark);
+
+            transform:
+                translateY(-3px);
 
             box-shadow:
-                0 15px 35px rgba(40, 120, 232, 0.30);
+                0 15px 35px
+                rgba(40,120,232,0.30);
+
         }
+
+
+        /* SECONDARY */
 
         .button-secondary {
+
             color: var(--text);
 
-            background: white;
+            background: #ffffff;
 
-            border: 1px solid rgba(16, 24, 40, 0.10);
+            border:
+                1px solid
+                rgba(16,24,40,0.10);
+
         }
+
 
         .button-secondary:hover {
+
             color: var(--blue);
-            border-color: rgba(40, 120, 232, 0.25);
-            transform: translateY(-3px);
+
+            border-color:
+                rgba(40,120,232,0.25);
+
+            transform:
+                translateY(-3px);
+
         }
 
 
-        /* =====================================================
+        /* ==================================================
            FOOTER
-        ===================================================== */
+        ================================================== */
 
         footer {
+
             position: fixed;
+
             bottom: 0;
+
             left: 0;
 
             width: 100%;
 
-            padding: 20px 6%;
+            padding:
+                18px 6%;
 
             display: flex;
+
             justify-content: space-between;
+
             align-items: center;
 
-            border-top: 1px solid rgba(16, 24, 40, 0.05);
+            background:
+                rgba(255,255,255,0.82);
 
-            background: rgba(255,255,255,0.78);
-            backdrop-filter: blur(15px);
+            border-top:
+                1px solid
+                rgba(16,24,40,0.05);
+
+            backdrop-filter:
+                blur(15px);
 
             color: #98a2b3;
 
             font-size: 10px;
-            letter-spacing: 0.5px;
+
+            z-index: 20;
+
         }
+
+
+        /* ==================================================
+           FOOTER SERVICES
+        ================================================== */
 
         .footer-services {
+
             display: flex;
+
             gap: 20px;
+
         }
+
 
         .footer-services span {
-            transition: 0.3s;
+
+            transition:
+                0.3s;
+
         }
+
 
         .footer-services span:hover {
-            color: var(--blue);
+
+            color:
+                var(--blue);
+
         }
+
+
+        /* ==================================================
+           SOCIAL
+        ================================================== */
 
         .social {
+
             display: flex;
-            gap: 18px;
+
+            gap: 17px;
+
         }
+
 
         .social a {
+
             color: #667085;
+
             text-decoration: none;
-            transition: 0.3s;
+
             font-weight: 600;
+
+            transition:
+                0.3s;
+
         }
+
 
         .social a:hover {
-            color: var(--blue);
+
+            color:
+                var(--blue);
+
         }
 
 
-        /* =====================================================
+        /* ==================================================
            ANIMATIONS
-        ===================================================== */
+        ================================================== */
 
-        @keyframes fadeUp {
+        @keyframes fade-up {
+
             from {
+
                 opacity: 0;
-                transform: translateY(25px);
+
+                transform:
+                    translateY(25px);
+
             }
 
             to {
+
                 opacity: 1;
-                transform: translateY(0);
+
+                transform:
+                    translateY(0);
+
             }
+
         }
 
-        @keyframes logoAppear {
+
+        @keyframes logo-appear {
+
             from {
+
                 opacity: 0;
-                transform: scale(0.88);
+
+                transform:
+                    translateY(20px)
+                    scale(0.92);
+
             }
 
             to {
+
                 opacity: 1;
-                transform: scale(1);
-            }
-        }
 
-        @keyframes floating {
-            0%, 100% {
-                transform: translateY(0);
+                transform:
+                    translateY(0)
+                    scale(1);
+
             }
 
-            50% {
-                transform: translateY(-7px);
-            }
         }
+
 
         @keyframes pulse {
+
             0% {
-                box-shadow: 0 0 0 0 rgba(40, 120, 232, 0.35);
+
+                box-shadow:
+                    0 0 0 0
+                    rgba(40,120,232,0.35);
+
             }
 
             70% {
-                box-shadow: 0 0 0 8px rgba(40, 120, 232, 0);
+
+                box-shadow:
+                    0 0 0 8px
+                    rgba(40,120,232,0);
+
             }
 
             100% {
-                box-shadow: 0 0 0 0 rgba(40, 120, 232, 0);
+
+                box-shadow:
+                    0 0 0 0
+                    rgba(40,120,232,0);
+
             }
+
         }
+
 
         @keyframes rotate {
+
             from {
-                transform: rotate(0deg);
+
+                transform:
+                    rotate(0deg);
+
             }
 
             to {
-                transform: rotate(360deg);
+
+                transform:
+                    rotate(360deg);
+
             }
+
         }
 
-        @keyframes rotateReverse {
+
+        @keyframes rotate-reverse {
+
             from {
-                transform: rotate(360deg);
+
+                transform:
+                    rotate(360deg);
+
             }
 
             to {
-                transform: rotate(0deg);
+
+                transform:
+                    rotate(0deg);
+
             }
+
         }
 
 
-        /* =====================================================
+        /* ==================================================
            TABLET
-        ===================================================== */
+        ================================================== */
 
         @media (max-width: 768px) {
 
             header {
-                padding: 22px 25px;
+
+                padding:
+                    22px 25px;
+
             }
 
-            .mini-logo {
+
+            .header-logo {
+
                 width: 120px;
+
             }
 
-            .header-status {
+
+            .status {
+
                 font-size: 9px;
+
             }
+
 
             main {
-                padding-top: 20px;
-                padding-bottom: 100px;
+
+                padding:
+                    20px
+                    20px
+                    100px;
+
             }
+
 
             .main-logo {
-                width: 270px;
-                margin-bottom: 30px;
+
+                width: 280px;
+
             }
+
 
             h1 {
-                letter-spacing: -2.5px;
+
+                letter-spacing:
+                    -2.5px;
+
             }
+
 
             .description {
+
                 font-size: 14px;
-                padding: 0 10px;
+
             }
 
-            .time {
+
+            .countdown-box {
+
                 width: 78px;
+
                 min-height: 78px;
+
             }
 
-            .time strong {
+
+            .countdown-number {
+
                 font-size: 23px;
+
             }
 
-            footer {
-                padding: 15px 20px;
-            }
 
             .footer-services {
+
                 display: none;
+
             }
 
-            footer {
-                justify-content: center;
-            }
         }
 
 
-        /* =====================================================
+        /* ==================================================
            MOBILE
-        ===================================================== */
+        ================================================== */
 
         @media (max-width: 500px) {
 
             header {
-                padding: 20px;
+
+                padding:
+                    20px;
+
             }
 
-            .mini-logo {
+
+            .header-logo {
+
                 width: 105px;
+
             }
 
-            .header-status {
+
+            .status {
+
                 font-size: 8px;
-                letter-spacing: 0.5px;
+
+                letter-spacing:
+                    0.5px;
+
             }
+
 
             main {
-                min-height: calc(100vh - 70px);
-                padding: 15px 18px 90px;
+
+                min-height:
+                    calc(100vh - 70px);
+
+                padding:
+                    15px
+                    18px
+                    90px;
+
             }
+
 
             .main-logo {
-                width: 230px;
-                margin-bottom: 25px;
+
+                width: 235px;
+
+                max-width: 70vw;
+
+                margin-bottom:
+                    25px;
+
             }
+
 
             .badge {
-                padding: 8px 13px;
+
+                padding:
+                    8px 13px;
+
                 font-size: 9px;
-                letter-spacing: 1.5px;
+
+                letter-spacing:
+                    1.5px;
+
             }
+
 
             h1 {
-                margin-top: 20px;
-                font-size: 48px;
-                letter-spacing: -2.5px;
+
+                margin-top:
+                    20px;
+
+                font-size:
+                    48px;
+
+                letter-spacing:
+                    -2.5px;
+
             }
+
 
             .description {
-                margin-top: 20px;
-                font-size: 13px;
-                line-height: 1.7;
+
+                margin-top:
+                    20px;
+
+                font-size:
+                    13px;
+
+                line-height:
+                    1.7;
+
             }
+
 
             .services {
-                margin-top: 25px;
+
+                margin-top:
+                    24px;
+
             }
+
 
             .service {
-                padding: 7px 10px;
-                font-size: 9px;
+
+                padding:
+                    7px 10px;
+
+                font-size:
+                    9px;
+
             }
+
 
             .countdown {
-                gap: 7px;
-                margin-top: 30px;
+
+                gap:
+                    7px;
+
+                margin-top:
+                    30px;
+
             }
 
-            .time {
-                width: 65px;
-                min-height: 68px;
-                border-radius: 12px;
+
+            .countdown-box {
+
+                width:
+                    65px;
+
+                min-height:
+                    68px;
+
+                border-radius:
+                    12px;
+
             }
 
-            .time strong {
-                font-size: 19px;
+
+            .countdown-number {
+
+                font-size:
+                    19px;
+
             }
 
-            .time span {
-                font-size: 7px;
-                letter-spacing: 1px;
+
+            .countdown-label {
+
+                font-size:
+                    7px;
+
+                letter-spacing:
+                    1px;
+
             }
+
 
             .buttons {
-                margin-top: 28px;
-                flex-direction: column;
-                width: 100%;
+
+                margin-top:
+                    28px;
+
+                flex-direction:
+                    column;
+
+                width:
+                    100%;
+
             }
+
 
             .button {
-                width: 100%;
-                max-width: 280px;
-                padding: 13px 18px;
+
+                width:
+                    100%;
+
+                max-width:
+                    280px;
+
+                padding:
+                    13px 18px;
+
             }
+
 
             footer {
-                font-size: 9px;
-                padding: 13px;
+
+                padding:
+                    13px;
+
+                justify-content:
+                    center;
+
+                font-size:
+                    9px;
+
             }
 
-            .social {
-                gap: 12px;
+
+            .dots {
+
+                opacity:
+                    0.12;
+
+                right:
+                    -80px;
+
+                top:
+                    12%;
+
             }
 
-            .dot-pattern {
-                opacity: 0.15;
-                right: -80px;
-                top: 12%;
+        }
+
+
+        /* ==================================================
+           REDUCE MOTION
+        ================================================== */
+
+        @media (prefers-reduced-motion: reduce) {
+
+            *,
+            *::before,
+            *::after {
+
+                animation-duration:
+                    0.01ms !important;
+
+                animation-iteration-count:
+                    1 !important;
+
+                scroll-behavior:
+                    auto !important;
+
             }
+
         }
 
     </style>
+
 </head>
 
 
 <body>
 
 
-    <!-- =====================================================
+    <!-- ==================================================
          BACKGROUND
-    ===================================================== -->
+    ================================================== -->
 
     <div class="background">
 
-        <div class="shape shape-one"></div>
+        <div class="circle circle-one"></div>
 
-        <div class="shape shape-two"></div>
+        <div class="circle circle-two"></div>
 
-        <div class="dot-pattern"></div>
+        <div class="dots"></div>
 
     </div>
 
 
-    <!-- =====================================================
+
+    <!-- ==================================================
          HEADER
-    ===================================================== -->
+    ================================================== -->
 
     <header>
 
-        <div class="mini-logo">
 
-            <!--
-                IMPORTANT:
-                Put your uploaded logo in the same folder
-                as this HTML file and rename it:
-
-                expograph-logo.png
-            -->
+        <div class="header-logo">
 
             <img
                 src="expograph-logo.png"
@@ -773,7 +1319,7 @@
         </div>
 
 
-        <div class="header-status">
+        <div class="status">
 
             <span class="status-dot"></span>
 
@@ -781,42 +1327,52 @@
 
         </div>
 
+
     </header>
 
 
-    <!-- =====================================================
-         MAIN
-    ===================================================== -->
+
+    <!-- ==================================================
+         MAIN CONTENT
+    ================================================== -->
 
     <main>
 
         <section class="hero">
 
 
-            <!-- MAIN LOGO -->
+            <!-- ==========================================
+                 LOGO
+            =========================================== -->
 
             <div class="main-logo">
 
                 <img
                     src="expograph-logo.png"
-                    alt="ExpoGraph — Agence de communication"
+                    alt="ExpoGraph"
                 >
 
             </div>
 
 
-            <!-- BADGE -->
+
+            <!-- ==========================================
+                 BADGE
+            =========================================== -->
 
             <div class="badge">
 
-                <span class="badge-line"></span>
+                <span class="badge-dot"></span>
 
                 Nouveau site web
 
             </div>
 
 
-            <!-- TITLE -->
+
+            <!-- ==========================================
+                 TITLE
+            =========================================== -->
 
             <h1>
 
@@ -827,18 +1383,25 @@
             </h1>
 
 
-            <!-- DESCRIPTION -->
+
+            <!-- ==========================================
+                 DESCRIPTION
+            =========================================== -->
 
             <p class="description">
 
-                Nous préparons une nouvelle expérience digitale
-                pour vous présenter l'univers ExpoGraph,
-                nos réalisations et nos solutions de communication.
+                Nous préparons une nouvelle expérience
+                digitale pour vous présenter l'univers
+                ExpoGraph, nos réalisations et nos solutions
+                de communication.
 
             </p>
 
 
-            <!-- SERVICES -->
+
+            <!-- ==========================================
+                 SERVICES
+            =========================================== -->
 
             <div class="services">
 
@@ -861,59 +1424,77 @@
             </div>
 
 
-            <!-- COUNTDOWN -->
+
+            <!-- ==========================================
+                 COUNTDOWN
+            =========================================== -->
 
             <div class="countdown">
 
 
-                <div class="time">
+                <div class="countdown-box">
 
-                    <strong id="days">
+                    <div
+                        class="countdown-number"
+                        id="days"
+                    >
                         00
-                    </strong>
+                    </div>
 
-                    <span>
+                    <div class="countdown-label">
                         Jours
-                    </span>
+                    </div>
 
                 </div>
 
 
-                <div class="time">
 
-                    <strong id="hours">
+                <div class="countdown-box">
+
+                    <div
+                        class="countdown-number"
+                        id="hours"
+                    >
                         00
-                    </strong>
+                    </div>
 
-                    <span>
+                    <div class="countdown-label">
                         Heures
-                    </span>
+                    </div>
 
                 </div>
 
 
-                <div class="time">
 
-                    <strong id="minutes">
+                <div class="countdown-box">
+
+                    <div
+                        class="countdown-number"
+                        id="minutes"
+                    >
                         00
-                    </strong>
+                    </div>
 
-                    <span>
+                    <div class="countdown-label">
                         Minutes
-                    </span>
+                    </div>
 
                 </div>
 
 
-                <div class="time">
 
-                    <strong id="seconds">
+                <div class="countdown-box">
+
+                    <div
+                        class="countdown-number"
+                        id="seconds"
+                    >
                         00
-                    </strong>
+                    </div>
 
-                    <span>
+                    <div class="countdown-label">
                         Secondes
-                    </span>
+                    </div>
 
                 </div>
 
@@ -921,14 +1502,19 @@
             </div>
 
 
-            <!-- BUTTONS -->
+
+            <!-- ==========================================
+                 BUTTONS
+            =========================================== -->
 
             <div class="buttons">
 
 
+                <!-- EMAIL -->
+
                 <a
-                    href="mailto:expographofficiel@gmail.com"
                     class="button button-primary"
+                    href="mailto:expographofficiel@gmail.com"
                 >
 
                     Nous contacter
@@ -936,11 +1522,14 @@
                 </a>
 
 
+
+                <!-- INSTAGRAM -->
+
                 <a
+                    class="button button-secondary"
                     href="https://instagram.com/expographagency"
                     target="_blank"
                     rel="noopener noreferrer"
-                    class="button button-secondary"
                 >
 
                     Instagram
@@ -956,17 +1545,27 @@
     </main>
 
 
-    <!-- =====================================================
+
+    <!-- ==================================================
          FOOTER
-    ===================================================== -->
+    ================================================== -->
 
     <footer>
 
 
+        <!-- COPYRIGHT -->
+
         <div>
-            © <span id="year"></span> ExpoGraph
+
+            ©
+            <span id="year"></span>
+            ExpoGraph
+
         </div>
 
+
+
+        <!-- SERVICES -->
 
         <div class="footer-services">
 
@@ -989,7 +1588,11 @@
         </div>
 
 
+
+        <!-- SOCIAL -->
+
         <div class="social">
+
 
             <a
                 href="https://instagram.com/expographagency"
@@ -999,11 +1602,13 @@
                 Instagram
             </a>
 
+
             <a
                 href="mailto:expographofficiel@gmail.com"
             >
                 Email
             </a>
+
 
         </div>
 
@@ -1011,32 +1616,42 @@
     </footer>
 
 
-    <!-- =====================================================
+
+    <!-- ==================================================
          JAVASCRIPT
-    ===================================================== -->
+    ================================================== -->
 
     <script>
 
 
-        /* =====================================================
-           YEAR
-        ===================================================== */
+        /* ================================================
+           CURRENT YEAR
+        ================================================= */
 
         document.getElementById("year").textContent =
             new Date().getFullYear();
 
 
 
-        /* =====================================================
-           COUNTDOWN
-           
-           CHANGE THIS DATE TO YOUR WEBSITE LAUNCH DATE
-        ===================================================== */
+        /* ================================================
+           WEBSITE LAUNCH DATE
+
+           CHANGE THIS DATE
+
+           Example:
+           1 September 2026 at midnight
+        ================================================= */
 
         const launchDate =
-            new Date("2026-09-01T00:00:00").getTime();
+            new Date(
+                "2026-09-01T00:00:00"
+            ).getTime();
 
 
+
+        /* ================================================
+           COUNTDOWN FUNCTION
+        ================================================= */
 
         function updateCountdown() {
 
@@ -1045,22 +1660,28 @@
                 new Date().getTime();
 
 
-            const distance =
+            const difference =
                 launchDate - now;
 
 
 
-            /* Website launched */
+            /* --------------------------------------------
+               IF LAUNCH DATE HAS ARRIVED
+            --------------------------------------------- */
 
-            if (distance <= 0) {
+            if (difference <= 0) {
 
-                document.getElementById("days").textContent = "00";
+                document.getElementById("days")
+                    .textContent = "00";
 
-                document.getElementById("hours").textContent = "00";
+                document.getElementById("hours")
+                    .textContent = "00";
 
-                document.getElementById("minutes").textContent = "00";
+                document.getElementById("minutes")
+                    .textContent = "00";
 
-                document.getElementById("seconds").textContent = "00";
+                document.getElementById("seconds")
+                    .textContent = "00";
 
                 return;
 
@@ -1068,36 +1689,53 @@
 
 
 
-            /* Calculate time */
+            /* --------------------------------------------
+               CALCULATE DAYS
+            --------------------------------------------- */
 
             const days =
                 Math.floor(
-                    distance /
+                    difference /
                     (1000 * 60 * 60 * 24)
                 );
 
 
+
+            /* --------------------------------------------
+               CALCULATE HOURS
+            --------------------------------------------- */
+
             const hours =
                 Math.floor(
-                    (distance %
+                    (difference %
                         (1000 * 60 * 60 * 24))
                     /
                     (1000 * 60 * 60)
                 );
 
 
+
+            /* --------------------------------------------
+               CALCULATE MINUTES
+            --------------------------------------------- */
+
             const minutes =
                 Math.floor(
-                    (distance %
+                    (difference %
                         (1000 * 60 * 60))
                     /
                     (1000 * 60)
                 );
 
 
+
+            /* --------------------------------------------
+               CALCULATE SECONDS
+            --------------------------------------------- */
+
             const seconds =
                 Math.floor(
-                    (distance %
+                    (difference %
                         (1000 * 60))
                     /
                     1000
@@ -1105,30 +1743,39 @@
 
 
 
-            /* Display */
+            /* --------------------------------------------
+               DISPLAY VALUES
+            --------------------------------------------- */
 
-            document.getElementById("days").textContent =
+            document.getElementById("days")
+                .textContent =
                 String(days).padStart(2, "0");
 
 
-            document.getElementById("hours").textContent =
+            document.getElementById("hours")
+                .textContent =
                 String(hours).padStart(2, "0");
 
 
-            document.getElementById("minutes").textContent =
+            document.getElementById("minutes")
+                .textContent =
                 String(minutes).padStart(2, "0");
 
 
-            document.getElementById("seconds").textContent =
+            document.getElementById("seconds")
+                .textContent =
                 String(seconds).padStart(2, "0");
 
         }
 
 
 
-        /* Start countdown */
+        /* ================================================
+           START COUNTDOWN
+        ================================================= */
 
         updateCountdown();
+
 
         setInterval(
             updateCountdown,
