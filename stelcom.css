@@ -1,0 +1,41 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+  background-color: #000; /* Black background */
+  color: #fff; /* White text */
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Container */
+.container {
+  text-align: center;
+}
+
+/* Logo */
+.logo {
+  width: 200px;
+  margin-bottom: 20px;
+}
+
+/* Heading */
+h1 {
+  font-size: 3rem;
+  color: #1e90ff; /* Bright blue */
+  margin-bottom: 10px;
+}
+
+/* Paragraph */
+p {
+  font-size: 1.2rem;
+  color: #87cefa; /* Light blue */
+}
