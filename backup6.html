@@ -16,10 +16,6 @@
 </head>
 
 <body>
-<div class="page-loader" aria-label="Chargement" role="status">
-    <img src="asset/img/logo-white.png" alt="Expograph">
-</div>
-
 <section class="hero">
     <div class="hero-yellow"></div>
     <div class="logo-box">
@@ -690,17 +686,6 @@
                 hamburger.classList.remove('active');
             }
         });
-    });
-</script>
-
-<script>
-    window.addEventListener('load', function () {
-        window.setTimeout(function () {
-            document.body.classList.add('page-loaded');
-            window.setTimeout(function () {
-                document.body.classList.add('page-animations-started');
-            }, 600);
-        }, 2000);
     });
 </script>
 

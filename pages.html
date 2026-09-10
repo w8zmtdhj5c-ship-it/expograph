@@ -13,6 +13,372 @@
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Barlow+Semi+Condensed:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="style.css">
+<style>
+    :root {
+        --blue: #007CFF;
+        --dark-blue: #071A2B;
+        --white: #FFFFFF;
+        --light: #F5F7FA;
+        --text: #071A2B;
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        background: #fff;
+        color: var(--dark-blue);
+    }
+
+    /* =========================================
+       MAIN SECTION
+    ========================================= */
+
+    .enseigne-section {
+        width: 100%;
+    }
+
+    /* =========================================
+       EACH ROW
+    ========================================= */
+
+    .enseigne-row {
+        width: 100%;
+        min-height: 420px;
+
+        display: flex;
+        align-items: center;
+
+        padding: 50px 20px;
+    }
+
+    /* =========================================
+       CONTENT WIDTH
+    ========================================= */
+
+    .enseigne-container {
+        width: 100%;
+        max-width: 1200px;
+
+        margin: 0 auto;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        gap: 70px;
+    }
+
+    /* =========================================
+       TEXT
+    ========================================= */
+
+    .enseigne-text {
+        flex: 1;
+        max-width: 540px;
+    }
+
+    .enseigne-text h2 {
+        margin: 0 0 22px 0;
+
+        font-size: 30px;
+        line-height: 1.2;
+
+        font-weight: 700;
+
+        color: var(--dark-blue);
+    }
+
+    .enseigne-text p {
+        margin: 0 0 14px 0;
+
+        font-size: 15px;
+        line-height: 1.65;
+
+        color: var(--dark-blue);
+
+        text-align: left;
+    }
+
+    .enseigne-text strong {
+        font-weight: 700;
+    }
+
+    .blue {
+        color: var(--blue);
+    }
+
+    /* =========================================
+       IMAGE
+    ========================================= */
+
+    .enseigne-image-wrapper {
+        position: relative;
+
+        flex: 0 0 390px;
+
+        width: 390px;
+        height: 330px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        overflow: hidden;
+
+        border: 7px solid var(--blue);
+
+        border-radius:
+            48% 52% 45% 55%
+            /
+            48% 45% 55% 52%;
+    }
+
+    .enseigne-image {
+        width: 100%;
+        height: 100%;
+
+        display: block;
+
+        object-fit: cover;
+    }
+
+    /* =========================================
+       ROW 1
+       WHITE
+       TEXT LEFT / IMAGE RIGHT
+    ========================================= */
+
+    .row-one {
+        background: var(--white);
+    }
+
+    .row-one .enseigne-container {
+        flex-direction: row;
+    }
+
+    /* =========================================
+       ROW 2
+       DARK
+       IMAGE LEFT / TEXT RIGHT
+    ========================================= */
+
+    .row-two {
+        background: var(--dark-blue);
+    }
+
+    .row-two .enseigne-container {
+        flex-direction: row-reverse;
+    }
+
+    .row-two .enseigne-text h2 {
+        color: var(--white);
+    }
+
+    .row-two .enseigne-text p {
+        color: var(--white);
+    }
+
+    /* =========================================
+       ROW 3
+       WHITE
+    ========================================= */
+
+    .row-three {
+        background: var(--white);
+    }
+
+    .row-three .enseigne-container {
+        flex-direction: row;
+    }
+
+    .row-three .enseigne-image-wrapper {
+        flex: 0 0 340px;
+
+        width: 340px;
+        height: 285px;
+    }
+
+    /* =========================================
+       ROW 4
+       LIGHT
+    ========================================= */
+
+    .row-four {
+        background: var(--light);
+    }
+
+    .row-four .enseigne-container {
+        flex-direction: row-reverse;
+    }
+
+    .row-four .enseigne-image-wrapper {
+        flex: 0 0 380px;
+
+        width: 380px;
+        height: 330px;
+    }
+
+    /* =========================================
+       DESKTOP LARGE
+    ========================================= */
+
+    @media (min-width: 1400px) {
+
+        .enseigne-container {
+            max-width: 1250px;
+        }
+
+        .enseigne-row {
+            min-height: 470px;
+        }
+
+        .enseigne-text {
+            max-width: 570px;
+        }
+
+        .enseigne-text h2 {
+            font-size: 32px;
+        }
+
+        .enseigne-text p {
+            font-size: 16px;
+        }
+
+        .enseigne-image-wrapper {
+            flex-basis: 420px;
+            width: 420px;
+            height: 350px;
+        }
+
+        .row-three .enseigne-image-wrapper {
+            flex-basis: 370px;
+            width: 370px;
+            height: 310px;
+        }
+
+        .row-four .enseigne-image-wrapper {
+            flex-basis: 410px;
+            width: 410px;
+            height: 350px;
+        }
+    }
+
+    /* =========================================
+       TABLET
+    ========================================= */
+
+    @media (max-width: 900px) {
+
+        .enseigne-row {
+            min-height: auto;
+            padding: 60px 30px;
+        }
+
+        .enseigne-container {
+            max-width: 750px;
+            gap: 40px;
+        }
+
+        .enseigne-text {
+            max-width: 400px;
+        }
+
+        .enseigne-text h2 {
+            font-size: 25px;
+        }
+
+        .enseigne-text p {
+            font-size: 13px;
+        }
+
+        .enseigne-image-wrapper,
+        .row-three .enseigne-image-wrapper,
+        .row-four .enseigne-image-wrapper {
+
+            flex-basis: 280px;
+
+            width: 280px;
+            height: 250px;
+        }
+    }
+
+    /* =========================================
+       MOBILE
+    ========================================= */
+
+    @media (max-width: 650px) {
+
+        .enseigne-row {
+            min-height: auto;
+            padding: 50px 25px;
+        }
+
+        .enseigne-container,
+        .row-two .enseigne-container,
+        .row-four .enseigne-container {
+
+            flex-direction: column;
+
+            gap: 35px;
+
+            align-items: center;
+        }
+
+        .enseigne-text {
+            width: 100%;
+            max-width: 100%;
+        }
+
+        .enseigne-text h2 {
+            font-size: 25px;
+        }
+
+        .enseigne-text p {
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .enseigne-image-wrapper,
+        .row-three .enseigne-image-wrapper,
+        .row-four .enseigne-image-wrapper {
+
+            flex: none;
+
+            width: 300px;
+            height: 260px;
+        }
+    }
+
+    /* =========================================
+       SMALL MOBILE
+    ========================================= */
+
+    @media (max-width: 400px) {
+
+        .enseigne-image-wrapper,
+        .row-three .enseigne-image-wrapper,
+        .row-four .enseigne-image-wrapper {
+
+            width: 260px;
+            height: 230px;
+        }
+
+        .enseigne-text h2 {
+            font-size: 22px;
+        }
+
+        .enseigne-text p {
+            font-size: 13px;
+        }
+    }
+
+</style>
 </head>
 
 <body>
@@ -117,13 +483,6 @@
             Panneau publicitaire
         </h1>
 
-        <div class="hero-location">
-            à Oujda, Maroc
-        </div>
-
-        <div class="hero-arabic">
-            صناعة اللوحات الإشهارية فن وإتقان
-        </div>
     </div>
     <!-- =====================================================
          SERVICES
@@ -195,302 +554,268 @@
     </div>
 </section>
 
-<section class="second-services">
-    <div class="second-services-container">
-        <div class="second-services-grid">
-            <!-- ================= SIGNALÉTIQUES ================= -->
-            <div class="second-services-item signaletique-card">
-                <div class="second-services-text">
-                    <h3>Signalétiques</h3>
-                    <p>
-                        Nous produisons sur mesure vos
-                        <strong>plaques signalétiques</strong>,
-                        <strong>panneaux flèches</strong> et
-                        <strong>totems directionnels</strong>.
-                    </p>
-                    <a
-                        href="/fr/nos-metiers/signaletique"
-                        class="second-services-btn btn-dark"
-                    >
-                        Découvrez nos salutations de<br>
-                        signalétique
-                    </a>
-                </div>
-                <div class="second-services-image signaletique-image">
-                    <img
-                        src="asset/img/fabricant-signaletique.png"
-                        alt="Fabricant de signalétique 100% sur mesure à Marrakecha"
-                        title="Fabrication et pose de signalétique à Marrakecha, Maroc"
-                    >
+<section class="enseigne-section">
 
-                </div>
-            </div>
-            <!-- ================= IMPRESSION ================= -->
-            <div class="second-services-item impression-card">
-                <div class="second-services-text">
-                    <h3>
-                        Impression<br>
-                        sérigraphie
-                    </h3>
-                    <p>
-                        Logoter vos t-shirts, uniformes
-                        professionnels ainsi que vos
-                        produits et sacs.
-                    </p>
-                    <a
-                        href="/fr/contact"
-                        class="second-services-btn btn-white"
-                    >
-                        Demander un devis gratuit
-                    </a>
-                </div>
-                <div class="second-services-image impression-image">
-                    <img
-                        src="asset/img/impression-serigraphie.png"
-                        alt="Impression sérigraphie t-shirt"
-                        title="Impression sérigraphie"
-                    >
-                </div>
-            </div>
-            <!-- ================= TOTEM ================= -->
-            <div class="second-services-item totem-card">
-                <div class="second-services-text">
-                    <h3>
-                        Totem<br>
-                        publicitaire
-                    </h3>
-                    <p>
-                        Renforcer votre visibilité
-                        extérieure, grâce à nos
-                        <strong>totems</strong> et
-                        <strong>panneau drapeau lumineux</strong>.
-                    </p>
 
-                    <a
-                        href="/fr/nos-metiers/totem-publicitaire-lumineux"
-                        class="second-services-btn btn-yellow"
-                    >
-                        Découvrez nos totems publicitaires
-                    </a>
+    <!-- =====================================================
+         01
+         ENSEIGNES PUBLICITAIRES EN PLEXIGLAS
+    ====================================================== -->
 
-                </div>
+    <div class="enseigne-row row-one">
 
-                <div class="second-services-image totem-image">
+        <div class="enseigne-container">
 
-                    <img
-                        src="asset/img/totem-publicitaire.svg"
-                        alt="Totem publicitaire Marrakecha"
-                        title="Fabrication et pose de totem publicitaire pour entreprises à Marrakecha"
-                    >
 
-                </div>
+            <!-- TEXT -->
+
+            <div class="enseigne-text">
+
+                <h2>
+                    Enseignes publicitaires en plexiglas
+                </h2>
+
+                <p>
+                    Vous recherchez un spécialiste dans la création ainsi
+                    que la fabrication d'enseigne publicitaire lumineuse en
+                    plexiglas à Marrakech au Maroc ?
+                </p>
+
+                <p>
+                    L'entreprise PUB INDUSTRIE est spécialisée dans la
+                    création ainsi que la fabrication d'enseignes
+                    publicitaires.
+                </p>
+
+                <p>
+                    Notre entreprise dispose de savoir-faire ainsi que de
+                    fabrication d'enseigne en plexiglas.
+                </p>
+
+                <p>
+                    Nous réalisons vos projets d'enseignes sur mesure,
+                    adaptées à votre identité visuelle.
+                </p>
 
             </div>
 
 
-            <!-- ================= PLV ================= -->
+            <!-- IMAGE -->
 
-            <div class="second-services-item plv-card">
+            <div class="enseigne-image-wrapper">
 
-                <div class="second-services-text">
+                <img
+                    src="images/enseigne-plexiglas.jpg"
+                    alt="Enseigne publicitaire en plexiglas"
+                    class="enseigne-image"
+                >
 
-                    <h3>
-                        PLV Support<br>
-                        de publicité
-                    </h3>
-
-                    <p>
-                        Commander votre
-                        <strong>support de publicité</strong>
-                        adéquat, intérieur et extérieur
-                    </p>
-
-                    <a
-                        href="/fr/nos-metiers/plv-et-supports"
-                        class="second-services-btn btn-dark"
-                    >
-                        Découvrez nos supports de PLV
-                    </a>
-
-                </div>
-
-                <div class="second-services-image plv-image">
-
-                    <img
-                        src="https://pub-industrie.com/img/section/plv-marrakech.png"
-                        alt="PLV Support de publicité Oujda"
-                        title="Supports PLV Personnalisables"
-                    >
-
-                </div>
             </div>
-        </div>
-    </div>
-</section>
 
-<section class="about mb-6">
-    <div class="about-container">
-        <div class="about-visual" aria-label="Agence de publicité à Oujda, Maroc">
-            <div class="about-collage">
-                <div class="photo photo-large">
-                    <img
-                        src="https://pub-industrie.com/img/main/pub-industrie-marrakech.png"
-                        alt="Agence de publicité à Oujda, Maroc"
-                        title="Panneau publicitaire & Plaque Signalétique à Oujda"
-                    >
-                </div>
-            </div>
-        </div>
-        <div class="about-content">
-            <h2>
-                Agence de publicité à <span class="highlight">Oujda</span>
-            </h2>
-            <hr class="section-divider">
-            <p>
-                Fondé en 2014, Pub Industrie est parmi les meilleurs ateliers de fabrication des panneaux et des enseignes publicitaires.
-                En toute innovation et créativité et à l’aide des dernières technologies innovantes, notre équipe vous propose les meilleurs produits et solutions dans le domaine de la publicité à Oujda.
-            </p>
-            <p>
-                En 10 ans, nous avons pu réaliser plus de 1000 projets, des enseignes installées à Oujda et dans des différentes villes du Maroc (Casablanca, Tanger…) avec une intervention dans plus de 100 divers secteurs d’activités, ce qui nous a permis de devenir un leader dans l’industrie publicitaire au niveau de la région et d’être connue sur Oujda et au Maroc par un professionnalisme et une qualité de travail incomparable.
-            </p>
-        </div>
-    </div>
-</section>
-<section class="gallery">
-    <div class="gallery-container">
-        <button class="gallery-arrow gallery-prev" aria-label="Previous" type="button">‹</button>
-        <div class="gallery-track">
-            <a class="gallery-item" href="https://pub-industrie.com/img/post/enseigne-marrakech-maroc.jpg" data-caption="Enseigne" data-group="main">
-                <span class="gall-overlay"></span>
-                <img src="https://pub-industrie.com/img/post/enseigne-marrakech-maroc.jpg" alt="Enseigne Marrakech" title="Enseigne Marrakech">
-                <div class="gall-contents">
-                    <span>Enseigne</span>
-                    <hr>
-                </div>
-            </a>
 
-            <a class="gallery-item" href="https://pub-industrie.com/img/post/enseigne-borkan.jpg" data-caption="Enseigne" data-group="main">
-                <span class="gall-overlay"></span>
-                <img src="https://pub-industrie.com/img/post/enseigne-borkan.jpg" alt="Enseigne Bor'Kan" title="Enseigne Bor'Kan">
-                <div class="gall-contents">
-                    <span>Enseigne</span>
-                    <hr>
-                </div>
-            </a>
-
-            <a class="gallery-item active" href="https://pub-industrie.com/img/post/totem-assurances-toutes-branches.jpg" data-caption="Totem" data-group="main">
-                <span class="gall-overlay"></span>
-                <img src="https://pub-industrie.com/img/post/totem-assurances-toutes-branches.jpg" alt="Totem Assurances Toutes Branches" title="Totem Assurances Toutes Branches">
-                <div class="gall-contents">
-                    <span>Totem</span>
-                    <hr>
-                </div>
-            </a>
-
-            <a class="gallery-item" href="https://pub-industrie.com/img/post/habillage-vehicule-bigor.jpg" data-caption="Habillage Véhicule" data-group="main">
-                <span class="gall-overlay"></span>
-                <img src="https://pub-industrie.com/img/post/habillage-vehicule-bigor.jpg" alt="Habillage véhicule Marrakecha" title="Habillage véhicule Marrakecha">
-                <div class="gall-contents">
-                    <span>Habillage Véhicule</span>
-                    <hr>
-                </div>
-            </a>
-
-            <a class="gallery-item" href="https://pub-industrie.com/img/post/habillage-vehicule-entreprise.jpg" data-caption="Habillage Véhicule" data-group="main">
-                <span class="gall-overlay"></span>
-                <img src="https://pub-industrie.com/img/post/habillage-vehicule-entreprise.jpg" alt="Habillage véhicule Maroc" title="Habillage véhicule Maroc">
-                <div class="gall-contents">
-                    <span>Habillage Véhicule</span>
-                    <hr>
-                </div>
-            </a>
-
-            <a class="gallery-item" href="https://pub-industrie.com/img/post/palissades-chantier.jpg" data-caption="Palissade de chantier" data-group="main">
-                <span class="gall-overlay"></span>
-                <img src="https://pub-industrie.com/img/post/palissades-chantier.jpg" alt="Palissades de chantier Marrakecha" title="Palissades de chantier Marrakecha">
-                <div class="gall-contents">
-                    <span>Palissade de chantier</span>
-                    <hr>
-                </div>
-            </a>
-
-            <a class="gallery-item" href="https://pub-industrie.com/img/post/habillage-facade-centre-radiologie-hivernage.jpg" data-caption="Habillage facade" data-group="main">
-                <span class="gall-overlay"></span>
-                <img src="https://pub-industrie.com/img/post/habillage-facade-centre-radiologie-hivernage.jpg" alt="Habillage facade centre radiologie Hivernage Marrakecha" title="Habillage facade centre radiologie Hivernage Marrakecha">
-                <div class="gall-contents">
-                    <span>Habillage facade</span>
-                    <hr>
-                </div>
-            </a>
-
-            <a class="gallery-item" href="https://pub-industrie.com/img/post/enseigne-lepicerie.jpg" data-caption="Enseigne" data-group="main">
-                <span class="gall-overlay"></span>
-                <img src="https://pub-industrie.com/img/post/enseigne-lepicerie.jpg" alt="Enseigne lépicerie Marrakecha" title="Enseigne lépicerie Marrakecha">
-                <div class="gall-contents">
-                    <span>Enseigne</span>
-                    <hr>
-                </div>
-            </a>
-
-        </div>
-
-        <button class="gallery-arrow gallery-next" aria-label="Next" type="button">›</button>
-
-    </div>
-
-</section>
-
-<section class="new-article">
-
-    <h2>Nous vous proposons de lire</h2>
-
-    <div class="article-container">
-
-        <div class="article-grid">
-
-            <article class="article-card">
-                <div class="article-image">
-                    <a href="https://pub-industrie.com/blog/facade-de-clinique-marrakech-prix-materiaux-et-design-en-2026">
-                        <img src="https://pub-industrie.com/img/post/devanture-enseigne-et-vetrophanie-de-clinique-des-maladies-renales-marrakech.png.png" title="Façade de clinique Marrakecha : prix, matériaux et design en 2026">
-                    </a>
-                </div>
-                <h3>
-                    <a href="https://pub-industrie.com/blog/facade-de-clinique-marrakech-prix-materiaux-et-design-en-2026">Façade de clinique Marrakecha : prix, matériaux et design en 2026</a>
-                </h3>
-            </article>
-
-            <article class="article-card">
-                <div class="article-image">
-                    <a href="https://pub-industrie.com/blog/le-totem-publicitaire-guide-complet-pour-bien-choisir-et-optimiser-votre-signaletique">
-                        <img src="asset/img/totem-publicitaire.png" alt="Totem publicitaire extérieur" title="Le totem publicitaire : guide complet pour bien choisir et optimiser votre signalétique">
-                    </a>
-                </div>
-                <h3>
-                    <a href="https://pub-industrie.com/blog/le-totem-publicitaire-guide-complet-pour-bien-choisir-et-optimiser-votre-signaletique">Le totem publicitaire : guide complet pour bien choisir et optimiser votre signalétique</a>
-                </h3>
-            </article>
-
-            <article class="article-card">
-                <div class="article-image">
-                    <a href="https://pub-industrie.com/blog/la-signaletique-dinterieur-moderne-et-sur-mesure-quand-lespace-prend-la-parole">
-                        <img src="https://pub-industrie.com/img/post/signaletique-bureau-plaque-porte-salle-conference-directionnelle.jpg.jpeg" alt="Signalétique intérieure moderne" title="La Signalétique d'Intérieur Moderne et Sur Mesure : Quand l'Espace Prend la Parole">
-                    </a>
-                </div>
-                <h3>
-                    <a href="https://pub-industrie.com/blog/la-signaletique-dinterieur-moderne-et-sur-mesure-quand-lespace-prend-la-parole">La Signalétique d'Intérieur Moderne et Sur Mesure : Quand l'Espace Prend la Parole</a>
-                </h3>
-            </article>
-
-        </div>
-
-        <div class="article-button-wrap">
-            <a class="article-button" href="https://pub-industrie.com/blog">Lire la plus</a>
         </div>
 
     </div>
 
-</section>
 
+
+    <!-- =====================================================
+         02
+         ENSEIGNE LUMINEUSE MÉTAL + PLEXIGLAS
+    ====================================================== -->
+
+    <div class="enseigne-row row-two">
+
+        <div class="enseigne-container">
+
+
+            <!-- TEXT -->
+
+            <div class="enseigne-text">
+
+                <h2>
+                    Enseigne lumineuse en métal et plexiglas
+                </h2>
+
+                <p>
+                    Faire le choix d'une enseigne publicitaire en métal et
+                    plexiglas est un atout majeur pour votre communication
+                    extérieure.
+                </p>
+
+                <p>
+                    Une enseigne lumineuse offre une visibilité optimale
+                    de votre entreprise et vous permet de vous démarquer.
+                </p>
+
+                <p>
+                    Nous vous accompagnons dans la conception, la fabrication
+                    et l'installation de votre enseigne.
+                </p>
+
+                <p>
+                    Pour obtenir le meilleur rendu, nous sélectionnons les
+                    matériaux adaptés à votre projet.
+                </p>
+
+                <p>
+                    PUB INDUSTRIE met son expertise à votre disposition
+                    pour réaliser vos projets d'enseignes.
+                </p>
+
+            </div>
+
+
+            <!-- IMAGE -->
+
+            <div class="enseigne-image-wrapper">
+
+                <img
+                    src="images/enseigne-metal.jpg"
+                    alt="Enseigne lumineuse en métal et plexiglas"
+                    class="enseigne-image"
+                >
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         03
+         ENSEIGNE DE MAGASIN EN INOX DORÉ
+    ====================================================== -->
+
+    <div class="enseigne-row row-three">
+
+        <div class="enseigne-container">
+
+
+            <!-- TEXT -->
+
+            <div class="enseigne-text">
+
+                <h2>
+                    <span class="blue">
+                        Enseigne
+                    </span>
+                    de magasin en inox doré
+                </h2>
+
+                <p>
+                    Une enseigne publicitaire de magasin joue un rôle
+                    important dans la stratégie marketing de chaque
+                    entreprise.
+                </p>
+
+                <p>
+                    C'est un excellent moyen pour capter toute l'attention
+                    de vos prospects et vous démarquer de la concurrence.
+                </p>
+
+                <p>
+                    Votre enseigne vous représente, vous êtes donc obligé
+                    de faire attention à sa conception et à son rendu.
+                </p>
+
+                <p>
+                    L'effet visuel que procure la lumière ainsi que le
+                    plexiglas vous permettra de faire passer votre message.
+                </p>
+
+                <p>
+                    PUB INDUSTRIE est votre spécialiste pour la création
+                    d'enseignes publicitaires sur mesure.
+                </p>
+
+            </div>
+
+
+            <!-- IMAGE -->
+
+            <div class="enseigne-image-wrapper">
+
+                <img
+                    src="images/enseigne-inox.jpg"
+                    alt="Enseigne de magasin en inox doré"
+                    class="enseigne-image"
+                >
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         04
+         ENSEIGNE MÉTAL PERFORÉ + PLEXIGLAS
+    ====================================================== -->
+
+    <div class="enseigne-row row-four">
+
+        <div class="enseigne-container">
+
+
+            <!-- TEXT -->
+
+            <div class="enseigne-text">
+
+                <h2>
+                    Enseigne publicitaire en métal
+                    perforé et plexiglas
+                </h2>
+
+                <p>
+                    Parmi notre large sélection de produits phares,
+                    nous proposons la pose d'enseigne publicitaire
+                    lumineuse en métal et plexiglas.
+                </p>
+
+                <p>
+                    Nous proposons de nombreux formats et dimensions
+                    afin de répondre aux besoins de chaque entreprise.
+                </p>
+
+                <p>
+                    Depuis plusieurs années, PUB INDUSTRIE réalise
+                    différents types d'enseignes publicitaires.
+                </p>
+
+                <p>
+                    Notre équipe vous accompagne dans la conception,
+                    fabrication et pose de votre enseigne sur mesure.
+                </p>
+
+            </div>
+
+
+            <!-- IMAGE -->
+
+            <div class="enseigne-image-wrapper">
+
+                <img
+                    src="images/enseigne-perforee.jpg"
+                    alt="Enseigne publicitaire en métal perforé et plexiglas"
+                    class="enseigne-image"
+                >
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+</section>
 <footer class="site-footer">
 
     <div class="footer-inner">
@@ -700,7 +1025,7 @@
             window.setTimeout(function () {
                 document.body.classList.add('page-animations-started');
             }, 600);
-        }, 2000);
+        }, 3000);
     });
 </script>
 

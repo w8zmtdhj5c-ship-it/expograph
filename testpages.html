@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Enseignes publicitaires</title>
+<style>
+    :root {
+        --blue: #007CFF;
+        --dark-blue: #071A2B;
+        --white: #FFFFFF;
+        --light: #F5F7FA;
+        --text: #071A2B;
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        background: #fff;
+        color: var(--dark-blue);
+    }
+
+    /* =========================================
+       MAIN SECTION
+    ========================================= */
+
+    .enseigne-section {
+        width: 100%;
+    }
+
+    /* =========================================
+       EACH ROW
+    ========================================= */
+
+    .enseigne-row {
+        width: 100%;
+        min-height: 420px;
+
+        display: flex;
+        align-items: center;
+
+        padding: 50px 20px;
+    }
+
+    /* =========================================
+       CONTENT WIDTH
+    ========================================= */
+
+    .enseigne-container {
+        width: 100%;
+        max-width: 1200px;
+
+        margin: 0 auto;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        gap: 70px;
+    }
+
+    /* =========================================
+       TEXT
+    ========================================= */
+
+    .enseigne-text {
+        flex: 1;
+        max-width: 540px;
+    }
+
+    .enseigne-text h2 {
+        margin: 0 0 22px 0;
+
+        font-size: 30px;
+        line-height: 1.2;
+
+        font-weight: 700;
+
+        color: var(--dark-blue);
+    }
+
+    .enseigne-text p {
+        margin: 0 0 14px 0;
+
+        font-size: 15px;
+        line-height: 1.65;
+
+        color: var(--dark-blue);
+
+        text-align: left;
+    }
+
+    .enseigne-text strong {
+        font-weight: 700;
+    }
+
+    .blue {
+        color: var(--blue);
+    }
+
+    /* =========================================
+       IMAGE
+    ========================================= */
+
+    .enseigne-image-wrapper {
+        position: relative;
+
+        flex: 0 0 390px;
+
+        width: 390px;
+        height: 330px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        overflow: hidden;
+
+        border: 7px solid var(--blue);
+
+        border-radius:
+            48% 52% 45% 55%
+            /
+            48% 45% 55% 52%;
+    }
+
+    .enseigne-image {
+        width: 100%;
+        height: 100%;
+
+        display: block;
+
+        object-fit: cover;
+    }
+
+    /* =========================================
+       ROW 1
+       WHITE
+       TEXT LEFT / IMAGE RIGHT
+    ========================================= */
+
+    .row-one {
+        background: var(--white);
+    }
+
+    .row-one .enseigne-container {
+        flex-direction: row;
+    }
+
+    /* =========================================
+       ROW 2
+       DARK
+       IMAGE LEFT / TEXT RIGHT
+    ========================================= */
+
+    .row-two {
+        background: var(--dark-blue);
+    }
+
+    .row-two .enseigne-container {
+        flex-direction: row-reverse;
+    }
+
+    .row-two .enseigne-text h2 {
+        color: var(--white);
+    }
+
+    .row-two .enseigne-text p {
+        color: var(--white);
+    }
+
+    /* =========================================
+       ROW 3
+       WHITE
+    ========================================= */
+
+    .row-three {
+        background: var(--white);
+    }
+
+    .row-three .enseigne-container {
+        flex-direction: row;
+    }
+
+    .row-three .enseigne-image-wrapper {
+        flex: 0 0 340px;
+
+        width: 340px;
+        height: 285px;
+    }
+
+    /* =========================================
+       ROW 4
+       LIGHT
+    ========================================= */
+
+    .row-four {
+        background: var(--light);
+    }
+
+    .row-four .enseigne-container {
+        flex-direction: row-reverse;
+    }
+
+    .row-four .enseigne-image-wrapper {
+        flex: 0 0 380px;
+
+        width: 380px;
+        height: 330px;
+    }
+
+    /* =========================================
+       DESKTOP LARGE
+    ========================================= */
+
+    @media (min-width: 1400px) {
+
+        .enseigne-container {
+            max-width: 1250px;
+        }
+
+        .enseigne-row {
+            min-height: 470px;
+        }
+
+        .enseigne-text {
+            max-width: 570px;
+        }
+
+        .enseigne-text h2 {
+            font-size: 32px;
+        }
+
+        .enseigne-text p {
+            font-size: 16px;
+        }
+
+        .enseigne-image-wrapper {
+            flex-basis: 420px;
+            width: 420px;
+            height: 350px;
+        }
+
+        .row-three .enseigne-image-wrapper {
+            flex-basis: 370px;
+            width: 370px;
+            height: 310px;
+        }
+
+        .row-four .enseigne-image-wrapper {
+            flex-basis: 410px;
+            width: 410px;
+            height: 350px;
+        }
+    }
+
+    /* =========================================
+       TABLET
+    ========================================= */
+
+    @media (max-width: 900px) {
+
+        .enseigne-row {
+            min-height: auto;
+            padding: 60px 30px;
+        }
+
+        .enseigne-container {
+            max-width: 750px;
+            gap: 40px;
+        }
+
+        .enseigne-text {
+            max-width: 400px;
+        }
+
+        .enseigne-text h2 {
+            font-size: 25px;
+        }
+
+        .enseigne-text p {
+            font-size: 13px;
+        }
+
+        .enseigne-image-wrapper,
+        .row-three .enseigne-image-wrapper,
+        .row-four .enseigne-image-wrapper {
+
+            flex-basis: 280px;
+
+            width: 280px;
+            height: 250px;
+        }
+    }
+
+    /* =========================================
+       MOBILE
+    ========================================= */
+
+    @media (max-width: 650px) {
+
+        .enseigne-row {
+            min-height: auto;
+            padding: 50px 25px;
+        }
+
+        .enseigne-container,
+        .row-two .enseigne-container,
+        .row-four .enseigne-container {
+
+            flex-direction: column;
+
+            gap: 35px;
+
+            align-items: center;
+        }
+
+        .enseigne-text {
+            width: 100%;
+            max-width: 100%;
+        }
+
+        .enseigne-text h2 {
+            font-size: 25px;
+        }
+
+        .enseigne-text p {
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .enseigne-image-wrapper,
+        .row-three .enseigne-image-wrapper,
+        .row-four .enseigne-image-wrapper {
+
+            flex: none;
+
+            width: 300px;
+            height: 260px;
+        }
+    }
+
+    /* =========================================
+       SMALL MOBILE
+    ========================================= */
+
+    @media (max-width: 400px) {
+
+        .enseigne-image-wrapper,
+        .row-three .enseigne-image-wrapper,
+        .row-four .enseigne-image-wrapper {
+
+            width: 260px;
+            height: 230px;
+        }
+
+        .enseigne-text h2 {
+            font-size: 22px;
+        }
+
+        .enseigne-text p {
+            font-size: 13px;
+        }
+    }
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<section class="enseigne-section">
+
+
+    <!-- =====================================================
+         01
+         ENSEIGNES PUBLICITAIRES EN PLEXIGLAS
+    ====================================================== -->
+
+    <div class="enseigne-row row-one">
+
+        <div class="enseigne-container">
+
+
+            <!-- TEXT -->
+
+            <div class="enseigne-text">
+
+                <h2>
+                    Enseignes publicitaires en plexiglas
+                </h2>
+
+                <p>
+                    Vous recherchez un spécialiste dans la création ainsi
+                    que la fabrication d'enseigne publicitaire lumineuse en
+                    plexiglas à Marrakech au Maroc ?
+                </p>
+
+                <p>
+                    L'entreprise PUB INDUSTRIE est spécialisée dans la
+                    création ainsi que la fabrication d'enseignes
+                    publicitaires.
+                </p>
+
+                <p>
+                    Notre entreprise dispose de savoir-faire ainsi que de
+                    fabrication d'enseigne en plexiglas.
+                </p>
+
+                <p>
+                    Nous réalisons vos projets d'enseignes sur mesure,
+                    adaptées à votre identité visuelle.
+                </p>
+
+            </div>
+
+
+            <!-- IMAGE -->
+
+            <div class="enseigne-image-wrapper">
+
+                <img
+                    src="images/enseigne-plexiglas.jpg"
+                    alt="Enseigne publicitaire en plexiglas"
+                    class="enseigne-image"
+                >
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         02
+         ENSEIGNE LUMINEUSE MÉTAL + PLEXIGLAS
+    ====================================================== -->
+
+    <div class="enseigne-row row-two">
+
+        <div class="enseigne-container">
+
+
+            <!-- TEXT -->
+
+            <div class="enseigne-text">
+
+                <h2>
+                    Enseigne lumineuse en métal et plexiglas
+                </h2>
+
+                <p>
+                    Faire le choix d'une enseigne publicitaire en métal et
+                    plexiglas est un atout majeur pour votre communication
+                    extérieure.
+                </p>
+
+                <p>
+                    Une enseigne lumineuse offre une visibilité optimale
+                    de votre entreprise et vous permet de vous démarquer.
+                </p>
+
+                <p>
+                    Nous vous accompagnons dans la conception, la fabrication
+                    et l'installation de votre enseigne.
+                </p>
+
+                <p>
+                    Pour obtenir le meilleur rendu, nous sélectionnons les
+                    matériaux adaptés à votre projet.
+                </p>
+
+                <p>
+                    PUB INDUSTRIE met son expertise à votre disposition
+                    pour réaliser vos projets d'enseignes.
+                </p>
+
+            </div>
+
+
+            <!-- IMAGE -->
+
+            <div class="enseigne-image-wrapper">
+
+                <img
+                    src="images/enseigne-metal.jpg"
+                    alt="Enseigne lumineuse en métal et plexiglas"
+                    class="enseigne-image"
+                >
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         03
+         ENSEIGNE DE MAGASIN EN INOX DORÉ
+    ====================================================== -->
+
+    <div class="enseigne-row row-three">
+
+        <div class="enseigne-container">
+
+
+            <!-- TEXT -->
+
+            <div class="enseigne-text">
+
+                <h2>
+                    <span class="blue">
+                        Enseigne
+                    </span>
+                    de magasin en inox doré
+                </h2>
+
+                <p>
+                    Une enseigne publicitaire de magasin joue un rôle
+                    important dans la stratégie marketing de chaque
+                    entreprise.
+                </p>
+
+                <p>
+                    C'est un excellent moyen pour capter toute l'attention
+                    de vos prospects et vous démarquer de la concurrence.
+                </p>
+
+                <p>
+                    Votre enseigne vous représente, vous êtes donc obligé
+                    de faire attention à sa conception et à son rendu.
+                </p>
+
+                <p>
+                    L'effet visuel que procure la lumière ainsi que le
+                    plexiglas vous permettra de faire passer votre message.
+                </p>
+
+                <p>
+                    PUB INDUSTRIE est votre spécialiste pour la création
+                    d'enseignes publicitaires sur mesure.
+                </p>
+
+            </div>
+
+
+            <!-- IMAGE -->
+
+            <div class="enseigne-image-wrapper">
+
+                <img
+                    src="images/enseigne-inox.jpg"
+                    alt="Enseigne de magasin en inox doré"
+                    class="enseigne-image"
+                >
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         04
+         ENSEIGNE MÉTAL PERFORÉ + PLEXIGLAS
+    ====================================================== -->
+
+    <div class="enseigne-row row-four">
+
+        <div class="enseigne-container">
+
+
+            <!-- TEXT -->
+
+            <div class="enseigne-text">
+
+                <h2>
+                    Enseigne publicitaire en métal
+                    perforé et plexiglas
+                </h2>
+
+                <p>
+                    Parmi notre large sélection de produits phares,
+                    nous proposons la pose d'enseigne publicitaire
+                    lumineuse en métal et plexiglas.
+                </p>
+
+                <p>
+                    Nous proposons de nombreux formats et dimensions
+                    afin de répondre aux besoins de chaque entreprise.
+                </p>
+
+                <p>
+                    Depuis plusieurs années, PUB INDUSTRIE réalise
+                    différents types d'enseignes publicitaires.
+                </p>
+
+                <p>
+                    Notre équipe vous accompagne dans la conception,
+                    fabrication et pose de votre enseigne sur mesure.
+                </p>
+
+            </div>
+
+
+            <!-- IMAGE -->
+
+            <div class="enseigne-image-wrapper">
+
+                <img
+                    src="images/enseigne-perforee.jpg"
+                    alt="Enseigne publicitaire en métal perforé et plexiglas"
+                    class="enseigne-image"
+                >
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+</section>
+
+
+</body>
+</html>

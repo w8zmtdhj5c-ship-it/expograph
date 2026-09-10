@@ -1,2 +1,0 @@
-# expograph
-Web site
