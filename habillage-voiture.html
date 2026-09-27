@@ -1,0 +1,895 @@
+﻿
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Habillage voiture Marrakech | Pub Industrie Maroc</title>
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Barlow+Semi+Condensed:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+<style>
+    :root {
+        --blue: #007CFF;
+        --dark-blue: #071A2B;
+        --white: #FFFFFF;
+        --light: #F5F7FA;
+        --text: #071A2B;
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        background: #fff;
+        color: var(--dark-blue);
+    }
+
+    /* =========================================
+       MAIN SECTION
+    ========================================= */
+
+    .enseigne-section {
+        width: 100%;
+    }
+
+    /* =========================================
+       EACH ROW
+    ========================================= */
+
+    .enseigne-row {
+        width: 100%;
+        min-height: 420px;
+
+        display: flex;
+        align-items: center;
+
+        padding: 50px 20px;
+    }
+
+    /* =========================================
+       CONTENT WIDTH
+    ========================================= */
+
+    .enseigne-container {
+        width: 100%;
+        max-width: 1200px;
+
+        margin: 0 auto;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        gap: 70px;
+    }
+
+    /* =========================================
+       TEXT
+    ========================================= */
+
+    .enseigne-text {
+        flex: 1;
+        max-width: 540px;
+    }
+
+    .enseigne-text h2 {
+        margin: 0 0 22px 0;
+
+        font-size: 30px;
+        line-height: 1.2;
+
+        font-weight: 700;
+
+        color: var(--dark-blue);
+    }
+
+    .enseigne-text p {
+        margin: 0 0 14px 0;
+
+        font-size: 15px;
+        line-height: 1.65;
+
+        color: var(--dark-blue);
+
+        text-align: left;
+    }
+
+    .enseigne-text strong {
+        font-weight: 700;
+    }
+
+    .blue {
+        color: var(--blue);
+    }
+
+    /* =========================================
+       IMAGE
+    ========================================= */
+
+    .enseigne-image-wrapper {
+        position: relative;
+
+        flex: 0 0 390px;
+
+        width: 390px;
+        height: 330px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        overflow: hidden;
+
+        border: 7px solid var(--blue);
+
+        border-radius:
+            48% 52% 45% 55%
+            /
+            48% 45% 55% 52%;
+    }
+
+    .enseigne-image {
+        width: 100%;
+        height: 100%;
+
+        display: block;
+
+        object-fit: cover;
+    }
+
+    /* =========================================
+       ROW 1
+       WHITE
+       TEXT LEFT / IMAGE RIGHT
+    ========================================= */
+
+    .row-one {
+        background: var(--white);
+    }
+
+    .row-one .enseigne-container {
+        flex-direction: row;
+    }
+
+    /* =========================================
+       ROW 2
+       DARK
+       IMAGE LEFT / TEXT RIGHT
+    ========================================= */
+
+    .row-two {
+        background: var(--dark-blue);
+    }
+
+    .row-two .enseigne-container {
+        flex-direction: row-reverse;
+    }
+
+    .row-two .enseigne-text h2 {
+        color: var(--white);
+    }
+
+    .row-two .enseigne-text p {
+        color: var(--white);
+    }
+
+    /* =========================================
+       ROW 3
+       WHITE
+    ========================================= */
+
+    .row-three {
+        background: var(--white);
+    }
+
+    .row-three .enseigne-container {
+        flex-direction: row;
+    }
+
+    .row-three .enseigne-image-wrapper {
+        flex: 0 0 340px;
+
+        width: 340px;
+        height: 285px;
+    }
+
+    /* =========================================
+       ROW 4
+       LIGHT
+    ========================================= */
+
+    .row-four {
+        background: var(--light);
+    }
+
+    .row-four .enseigne-container {
+        flex-direction: row-reverse;
+    }
+
+    .row-four .enseigne-image-wrapper {
+        flex: 0 0 380px;
+
+        width: 380px;
+        height: 330px;
+    }
+
+    /* =========================================
+       DESKTOP LARGE
+    ========================================= */
+
+    @media (min-width: 1400px) {
+
+        .enseigne-container {
+            max-width: 1250px;
+        }
+
+        .enseigne-row {
+            min-height: 470px;
+        }
+
+        .enseigne-text {
+            max-width: 570px;
+        }
+
+        .enseigne-text h2 {
+            font-size: 32px;
+        }
+
+        .enseigne-text p {
+            font-size: 16px;
+        }
+
+        .enseigne-image-wrapper {
+            flex-basis: 420px;
+            width: 420px;
+            height: 350px;
+        }
+
+        .row-three .enseigne-image-wrapper {
+            flex-basis: 370px;
+            width: 370px;
+            height: 310px;
+        }
+
+        .row-four .enseigne-image-wrapper {
+            flex-basis: 410px;
+            width: 410px;
+            height: 350px;
+        }
+    }
+
+    /* =========================================
+       TABLET
+    ========================================= */
+
+    @media (max-width: 900px) {
+
+        .enseigne-row {
+            min-height: auto;
+            padding: 60px 30px;
+        }
+
+        .enseigne-container {
+            max-width: 750px;
+            gap: 40px;
+        }
+
+        .enseigne-text {
+            max-width: 400px;
+        }
+
+        .enseigne-text h2 {
+            font-size: 25px;
+        }
+
+        .enseigne-text p {
+            font-size: 13px;
+        }
+
+        .enseigne-image-wrapper,
+        .row-three .enseigne-image-wrapper,
+        .row-four .enseigne-image-wrapper {
+
+            flex-basis: 280px;
+
+            width: 280px;
+            height: 250px;
+        }
+    }
+
+    /* =========================================
+       MOBILE
+    ========================================= */
+
+    @media (max-width: 650px) {
+
+        .enseigne-row {
+            min-height: auto;
+            padding: 50px 25px;
+        }
+
+        .enseigne-container,
+        .row-two .enseigne-container,
+        .row-four .enseigne-container {
+
+            flex-direction: column;
+
+            gap: 35px;
+
+            align-items: center;
+        }
+
+        .enseigne-text {
+            width: 100%;
+            max-width: 100%;
+        }
+
+        .enseigne-text h2 {
+            font-size: 25px;
+        }
+
+        .enseigne-text p {
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .enseigne-image-wrapper,
+        .row-three .enseigne-image-wrapper,
+        .row-four .enseigne-image-wrapper {
+
+            flex: none;
+
+            width: 300px;
+            height: 260px;
+        }
+    }
+
+    /* =========================================
+       SMALL MOBILE
+    ========================================= */
+
+    @media (max-width: 400px) {
+
+        .enseigne-image-wrapper,
+        .row-three .enseigne-image-wrapper,
+        .row-four .enseigne-image-wrapper {
+
+            width: 260px;
+            height: 230px;
+        }
+
+        .enseigne-text h2 {
+            font-size: 22px;
+        }
+
+        .enseigne-text p {
+            font-size: 13px;
+        }
+    }
+
+</style>
+</head>
+
+<body>
+<div class="page-loader" aria-label="Chargement" role="status">
+    <img src="asset/img/logo-white.png" alt="Expograph">
+</div>
+
+<section class="hero">
+    <div class="hero-yellow"></div>
+    <div class="logo-box">
+        <img
+            src="asset/img/logo.png"
+            alt="Expograph"
+        >
+    </div>
+    <!-- =====================================================
+         NAVIGATION
+    ====================================================== -->
+
+    <nav class="navbar">
+
+        <button class="hamburger" aria-label="Toggle menu" type="button">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <ul class="nav-list">
+
+            <li class="nav-item has-submenu">
+                <a href="#" class="nav-link menu-trigger">
+                    Enseigne
+                    <span class="arrow">â–¼</span>
+                </a>
+                <ul class="submenu">
+                    <li><a href="#">Enseignes lumineuses</a></li>
+                    <li><a href="#">Enseigne publicitaire</a></li>
+                </ul>
+            </li>
+
+            <li class="nav-item has-submenu">
+                <a href="#" class="nav-link menu-trigger">
+                    Panneau
+                    <span class="arrow">â–¼</span>
+                </a>
+                <ul class="submenu">
+                    <li><a href="#">Panneaux publicitaires lumineux</a></li>
+                    <li><a href="#">Panneaux publicitaires non lumineux</a></li>
+                    <li><a href="#">Panneaux drapeau</a></li>
+                </ul>
+            </li>
+
+            <li class="nav-item">
+                <a href="#" class="nav-link">Totem</a>
+            </li>
+
+            <li class="nav-item">
+                <a href="#" class="nav-link">SignalÃ©tique</a>
+            </li>
+
+            <li class="nav-item has-submenu">
+                <a href="#" class="nav-link menu-trigger">
+                    Habillage
+                    <span class="arrow">â–¼</span>
+                </a>
+                <ul class="submenu">
+                    <li><a href="#">Habillage voiture</a></li>
+                    <li><a href="#">Stickers muraux</a></li>
+                    <li><a href="#">Habillage de magasin</a></li>
+                </ul>
+            </li>
+
+            <li class="nav-item">
+                <a href="#" class="nav-link">Impression et SÃ©rigraphie</a>
+            </li>
+
+            <li class="nav-item">
+                <a href="#" class="nav-link">Contact</a>
+            </li>
+
+            <li class="nav-item has-submenu language-item">
+                <a href="#" class="nav-link menu-trigger language">
+                    FR
+                    <span class="arrow">â–¼</span>
+                </a>
+                <ul class="submenu language-submenu">
+                    <li><a href="#">FR</a></li>
+                    <li><a href="#">EN</a></li>
+                </ul>
+            </li>
+
+        </ul>
+
+    </nav>
+    <!-- =====================================================
+         TITLE
+    ====================================================== -->
+
+    <div class="hero-content">
+
+        <h1 class="hero-title">
+            Panneau publicitaire
+        </h1>
+
+    </div>
+    <!-- =====================================================
+         SERVICES
+    ====================================================== -->
+    <div class="services">
+        <div class="services-grid">
+            <!-- =================================================
+                 1. ENSEIGNE
+            ================================================== -->
+            <div class="service">
+                <img
+                    src="asset/img/enseigne-lumineuse.png"
+                    alt="Fabricant d'enseignes publicitaires sur mesure Ã  Oujda"
+                    title="Enseigne lumineuse sur-mesure Ã  Oujda, Maroc"
+                    class="service-image"
+                >
+                <h2 class="service-title">
+                    Enseigne Lumineuse
+                </h2>
+                <a
+                    href="/fr/nos-metiers/enseignes-lumineuses"
+                    class="service-button"
+                >
+                    Demander des infos
+                </a>
+            </div>
+            <!-- =================================================
+                 2. PANNEAU
+            ================================================== -->
+
+            <div class="service">
+                <img
+                    src="asset/img/panneau-publicitaire.png"
+                    alt="Panneau publicitaire & Plaque SignalÃ©tique Ã  Oujda, Maroc"
+                    title="Fabricant panneau publicitaire | Conception, Fabrication, Pose"
+                    class="service-image"
+                >
+                <h2 class="service-title">
+                    Panneau publicitaire
+                </h2>
+                <a
+                    href="/fr/nos-metiers/panneaux-publicitaires-lumineux"
+                    class="service-button"
+                >
+                    DÃ©couvrir
+                </a>
+            </div>
+            <!-- =================================================
+                 3. VEHICLE
+            ================================================== -->
+            <div class="service">
+                <img
+                    src="asset/img/habillage-voiture.png"
+                    alt="Habillage de voiture Marrakecha"
+                    title="Habillage et Marquage de vÃ©hicule Ã  Marrakecha"
+                    class="service-image"
+                >
+                <h2 class="service-title">
+                    Habillage de voiture
+                </h2>
+                <a
+                    href="/fr/nos-metiers/habillage-voiture"
+                    class="service-button"
+                >
+                    En savoir plus
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+<div class='enseigne-section'>
+<div class='enseigne-row row-one'>
+<div class='enseigne-container'>
+<div class='enseigne-text'>
+<h2>Habillage vÃ©hicule</h2>
+<p>Pour un service dâ€™habillage de voiture publicitaire Ã  Marrakech complet ou partiel, faites appel au savoir-faire de notre enseigne. PUB INDUSTRIE prend en charge diffÃ©rents projets de marquage de vÃ©hicules de A Ã  Z. </p>
+<p>En effet, il vous sera possible de choisir entre une gamme variÃ©e pour lâ€™impression publicitaire sur voiture ou de lettrage, pour un marquage sur voiture sur-mesure. Chaque produit est entiÃ¨rement personnalisable selon les besoins de chaque client ; Pour une publicitÃ© saisissante et communicante, nous vous livrons des rendus qualitatifs dâ€™une grande longÃ©vitÃ©. Un panel de couleurs respectant votre charte graphique sera mis en place sous demande, afin de promouvoir votre identitÃ© de la meilleure faÃ§on possible.</p>
+<p>Transformez votre vÃ©hicule en un vrai outil publicitaire grÃ¢ce Ã  un service Ã  lâ€™impression vÃ©hicule de vÃ©hicule conÃ§u spÃ©cialement pour vous ; Un projet ? Une demande de devis ? Nâ€™hÃ©sitez pas de communiquer avec nous. Parce que nous maÃ®trisons Ã  la perfection notre domaine dâ€™activitÃ©, que nous sommes en mesure de rÃ©pondre Ã  toutes vos attentes dans les meilleurs dÃ©lais.<br></p>
+
+</div>
+<div class='enseigne-image-wrapper'><img src='https://pub-industrie.com/img/post/167067080797396.png' alt='Habillage vÃ©hicule' class='enseigne-image'></div>
+</div>
+</div>
+<div class='enseigne-row row-two'>
+<div class='enseigne-container'>
+<div class='enseigne-image-wrapper'><img src='https://pub-industrie.com/img/post/167067098819807.png' alt='Impression Publicitaire sur camion et camionnette' class='enseigne-image'></div>
+<div class='enseigne-text'>
+<h2>Impression Publicitaire sur camion et camionnette</h2>
+<p>Toujours dans le but de vous dÃ©marquer de la concurrence, notre entreprise vous propose un panel de solutions de marquage voiture utilitaire Ã  Marrakech et partout au Maroc. Quâ€™il sâ€™agisse de mettre en valeur votre identitÃ©, services, logos ou pour vÃ©hiculer un slogan autour de votre activitÃ©, toutes les solutions sâ€™avÃ¨rent possibles avec PUB INDUSTRIE.</p>
+<p>Nous vous garantissons un marquage qualitatif, brillant et durable. Pour une pose de courte ou de longue durÃ©e, nos Ã©quipes se chargent de la conception, de la pose, de lâ€™entretien, mais Ã©galement du dÃ©collage de votre marquage sans abÃ®mer la peinture de votre vÃ©hicule utilitaire.</p>
+<p>Pour une commande standard dâ€™adhÃ©sifs pour vÃ©hicules, ou pour un habillage entiÃ¨rement personnalisable, tous les ingrÃ©dients seront au rendez-vous pour communiquer lâ€™image de votre entreprise, de la faÃ§on la plus Ã©lÃ©gante. Votre covering ne sera pas inaperÃ§u ! <br></p>
+
+</div>
+</div>
+</div>
+<div class='enseigne-row row-three'>
+<div class='enseigne-container'>
+<div class='enseigne-text'>
+<h2><span class="text-main">Habillage</span>
+
+                                        
+                                            de
+
+                                        
+                                            bus
+
+                                        
+                                            et
+
+                                        
+                                            autocar
+
+                                        
+                                            et
+
+                                        
+                                            minibus</h2>
+<p>Lâ€™habillage des bus ou des autocars de votre entreprise est loin dâ€™Ãªtre une option. Aujourdâ€™hui, votre image de marque se joue sur une stratÃ©gie de communication bien Ã©tudiÃ©e. Pourquoi donc passer Ã  cÃ´tÃ© de la <b>publicitÃ© sur vÃ©hicule professionnel</b>, qui aujourdâ€™hui, lâ€™un des crÃ©neaux marketing les plus utilisÃ©s.</p>
+<p>Donnez plus de visibilitÃ© Ã  votre entreprise avec une gamme de <b>stickers pour utilitaires</b> touchant ainsi une grande partie du public. GrÃ¢ce Ã  de fortes connaissances dans le domaine, ainsi que notre esprit crÃ©atif, nous sommes en mesure de concevoir et de pose des habillages pour tous types de vÃ©hicules utilitaires, Ã  savoir : bus, autocars, minibus, camionnettes, remorques ou engins de chantier, etc. </p>
+<p>Nos habillages de vÃ©hicules utilitaires sont dâ€™une grande rÃ©sistance aux diffÃ©rents changements climatiques. Vous pouvez choisir entre un habillage complet ou partiel, couvrant ainsi lâ€™arriÃ¨re ou juste les vitres de votre utilitaire. Vous avez une question particuliÃ¨re ? Communiquons ensemble autour de votre projet ! <br></p>
+
+</div>
+<div class='enseigne-image-wrapper'><img src='https://pub-industrie.com/img/post/167146019255083.png' alt='<span class="text-main">Habillage</span>
+
+                                        
+                                            de
+
+                                        
+                                            bus
+
+                                        
+                                            et
+
+                                        
+                                            autocar
+
+                                        
+                                            et
+
+                                        
+                                            minibus' class='enseigne-image'></div>
+</div>
+</div>
+<div class='enseigne-row row-four'>
+<div class='enseigne-container'>
+<div class='enseigne-image-wrapper'><img src='https://pub-industrie.com/img/post/167067125581272.png' alt='<span class="text-main border-text-black">Habillage</span>
+
+                                        
+                                            de
+
+                                        
+                                            triporteur' class='enseigne-image'></div>
+<div class='enseigne-text'>
+<h2><span class="text-main border-text-black">Habillage</span>
+
+                                        
+                                            de
+
+                                        
+                                            triporteur</h2>
+<p>Vous avez un triporteur que vous dÃ©sirez personnaliser ? Sortez du lot, et crÃ©ez une identitÃ© visuelle unique et attirante pour votre activitÃ©. GrÃ¢ce Ã  des solutions dâ€™<strong>habillage de triporteur Ã  Marrakech </strong>sur-mesure, nous vous aidons Ã  promouvoir votre image de marque tout en gagnant la confiance de vos clients potentiels.</p>
+<p>Faites la dÃ©couverte dâ€™une panoplie de <strong>covering utilitaire</strong> Ã  satisfaire tous les goÃ»ts et budgets. PUB INDUSTRIE, est le leader de rÃ©fÃ©rence de lâ€™habillage de vÃ©hicules et de triporteurs. Nous accompagnons notre client depuis la conception de son projet, jusquâ€™Ã  sa rÃ©alisation finale. GrÃ¢ce Ã  une Ã©quipe de designers et dâ€™artisans hautement qualifiÃ©e, nos projets aboutissent avec une finition irrÃ©prochable et une durÃ©e dans le temps trÃ¨s satisfaisante.</p>
+<p>De plus, nous mettons au service de lâ€™ensemble de nos clients, une assistance rÃ©active pour toute Ã©ventuelle demande ou entretien. Vous avez un projet dâ€™habillage de triporteur Ã  Marrakech ou au Maroc ? Sollicitez notre savoir-faire via un simple appel au numÃ©ro : <a href="tel:05244-48453" target="_blank">05244-48453</a> !<br></p>
+
+</div>
+</div>
+</div>
+<div class='enseigne-row row-one'>
+<div class='enseigne-container'>
+<div class='enseigne-text'>
+<h2>PublicitÃ© sur vÃ©hicule dâ€™entreprise</h2>
+<p>La <strong>publicitÃ© sur voiture</strong> communÃ©ment appelÃ©e le <strong>marquage publicitaire</strong> est un outil de communication efficace et rentable Ã  moyen terme. Cette solution marketing par excellence, vous permet une grande visibilitÃ© et rÃ©pond Ã  plusieurs objectifs Ã  la fois, notamment ceux de la promotion dâ€™un service ou la prospection en gÃ©nÃ©rale. </p>
+<p>Lâ€™<strong>habillage auto</strong> est une stratÃ©gie complÃ©mentaire aux autres moyens de communication mis en place par votre entreprise. La mobilitÃ© du vÃ©hicule permet de toucher un nombre considÃ©rable de personnes ; Dans le but de vous dÃ©marquer de la concurrence et pour que votre passage soit attendu par le grand public, nous vous proposons de dÃ©couvrir nos solutions sur mesure dâ€™habillage de voitures Ã  Marrakech et partout au Maroc.</p>
+<p>Faites-vous connaÃ®tre avec une publicitÃ© sur voiture cohÃ©rente et ciblÃ©e ! Pour plus de renseignements sur notre service dâ€™habillage de voiture, nâ€™hÃ©sitez pas de nous contacter. <br></p>
+
+</div>
+<div class='enseigne-image-wrapper'><img src='https://pub-industrie.com/img/post/167067161635178.png' alt='PublicitÃ© sur vÃ©hicule dâ€™entreprise' class='enseigne-image'></div>
+</div>
+</div>
+<div class='enseigne-row row-two'>
+<div class='enseigne-container'>
+<div class='enseigne-image-wrapper'><img src='https://pub-industrie.com/img/post/167067180060244.png' alt='Marquage de voiture de service' class='enseigne-image'></div>
+<div class='enseigne-text'>
+<h2>Marquage de voiture de service</h2>
+<p>PUB INDUSTRIE vous assure une panoplie de services liÃ©e au <strong>marquage de voiture de service</strong>, Ã  savoir : <strong>autocollants voiture personnalisÃ©s</strong>, <strong>marquage de vÃ©hicules publicitaires</strong> citadins ou utilitaires et <strong>dÃ©coration de vÃ©hicules</strong> pour une occasion particuliÃ¨re. </p>
+<p>Il est bon Ã  savoir, que le marquage de voiture est un outil de communication incontournable. Il peut Ãªtre mis en place pour la promotion de services, pour la prospection ou tout simplement pour la valorisation de votre identitÃ© visuelle. Quel que soit votre objectif, notre Ã©quipe qualifiÃ©e, vous propose la formule la plus adaptÃ©e Ã  votre besoin ainsi quâ€™Ã  votre enveloppe budgÃ©taire.</p>
+<p>Vous vous souciez pour le prix de votre habillage de voiture ? Plus maintenant ! Avec notre panel de services, Ã  chaque enjeu une solution bien Ã©tudiÃ©e pour acquÃ©rir davantage de notoriÃ©tÃ© auprÃ¨s de votre public ciblÃ©.<br></p>
+
+</div>
+</div>
+</div>
+
+</div>
+<footer class="site-footer">
+
+    <div class="footer-inner">
+
+        <div class="footer-grid">
+
+            <div class="footer-block contact-block">
+
+                <h3 class="footer-title">
+                    Commencer<br>
+                    votre projet<br>
+                    <span>tout de suite</span>
+                </h3>
+
+                <ul class="footer-contact-list">
+                    <li>
+                        <a href="tel:+2125">â˜Ž +212 </a>
+                    </li>
+                    <li>
+                        <a href="tel:+2120676487566">âœ† +212 676 487 566</a>
+                    </li>
+                    <li>
+                        <a href="mailto:expograph@gmail.com">âœ‰ expograph@gmail.com</a>
+                    </li>
+                </ul>
+
+                <div class="map-box">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3967.687466252411!2d-1.9402769000000004!3d34.703443!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd78636be90cc269%3A0xe4fa65782a6ea741!2sExpoGraph%20%7C%20Panneaux%20Publicitaires%203D%20Oujda!5e1!3m2!1sfr!2sma!4v1787654601787!5m2!1sfr!2sma"
+                     width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" 
+                     referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                </div>
+
+            </div>
+
+            <div class="footer-block info-block">
+
+                <h3 class="arabic-title">ØµÙ†Ø§Ø¹Ø© Ø§Ù„Ø¥Ø´Ù‡Ø§Ø± ÙÙ† ÙˆØ§Ø¨Ø¯Ø§Ø¹</h3>
+
+                <div class="info-columns">
+
+                    <div class="info-column">
+                        <h4>Horaires</h4>
+                        <div class="hours-list">
+                            <p>Lundi au vendredi</p>
+                            <span>09:00 Ã  13:00</span>
+                            <span>14:00 Ã  18:00</span>
+                            <p>Samedi</p>
+                            <span>09:00 Ã  13:00</span>
+                            <p>Dimanche</p>
+                            <span>FermÃ©</span>
+                        </div>
+                    </div>
+
+                    <div class="info-column">
+                        <h4>Menu</h4>
+                        <ul class="footer-menu">
+                            <li><a href="#">Qui-sommes nous?</a></li>
+                            <li><a href="#">RÃ©alisations</a></li>
+                            <li><a href="#">Palissades de chantier</a></li>
+                            <li><a href="#">PLV et supports</a></li>
+                            <li><a href="#">Blog</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="info-column">
+                        <h4>Adresse</h4>
+                        <p>
+                            2eme Etg NÂ°03, NÂ°06 Rue Abou Obeida Ibn Al Jarrah<br>
+                            Oujda 60000.
+                        </p>
+                    </div>
+
+                    <div class="info-column">
+                        <h4>LÃ©gale</h4>
+                        <ul class="footer-menu">
+                            <li><a href="#">Politique de confidentialitÃ©</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="footer-block sketch-block">
+                <div class="sketch-plate">
+                    <div class="sketch-mark">
+                        <img src="https://pub-industrie.com/img/main/Sketch.svg" alt="Art graphic">
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-block form-block">
+
+                <h3>Vous avez un projet<br>contactez nous tout de suite</h3>
+
+                <form class="contact-form">
+                    <input type="text" placeholder="Votre nom et prÃ©nom*">
+                    <input type="tel" placeholder="Votre numÃ©ro de tÃ©lÃ©phone*">
+                    <input type="email" placeholder="Votre Email">
+                    <textarea rows="5" placeholder="Votre message"></textarea>
+                    <button type="submit">Envoyer</button>
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+
+        <div class="social-row">
+            <a href="#" aria-label="Facebook">f</a>
+            <a href="#" aria-label="Pinterest">P</a>
+            <a href="#" aria-label="Instagram">â—Ž</a>
+            <a href="#" aria-label="YouTube">â—‰</a>
+            <a href="#" aria-label="LinkedIn">in</a>
+            <a href="#" aria-label="Quora">Q</a>
+        </div>
+
+        <p>
+            Les marques dÃ©posÃ©es sont la propriÃ©tÃ© de leurs propriÃ©taires respectifs.<br>
+            Â© 2008-2026 Pub industrie.
+        </p>
+
+    </div>
+
+</footer>
+
+<script>
+    const hamburger = document.querySelector('.hamburger');
+    const navList = document.querySelector('.nav-list');
+    const menuItems = document.querySelectorAll('.nav-item.has-submenu');
+    const navLinks = document.querySelectorAll('.nav-link:not(.menu-trigger)');
+
+    let isMobile = window.innerWidth <= 768;
+
+    // Update mobile status on resize
+    window.addEventListener('resize', () => {
+        isMobile = window.innerWidth <= 768;
+        if (window.innerWidth > 768) {
+            navList.classList.remove('mobile-open');
+            hamburger.classList.remove('active');
+        }
+    });
+
+    // Hamburger menu toggle for mobile
+    if (hamburger) {
+        hamburger.addEventListener('click', function (event) {
+            event.stopPropagation();
+            hamburger.classList.toggle('active');
+            navList.classList.toggle('mobile-open');
+        });
+    }
+
+    // Handle submenu toggles
+    menuItems.forEach(item => {
+        const trigger = item.querySelector('.menu-trigger');
+        if (!trigger) return;
+
+        trigger.addEventListener('click', function (event) {
+            event.preventDefault();
+            event.stopPropagation();
+
+            if (isMobile) {
+                // Mobile: toggle this menu only
+                item.classList.toggle('open');
+            } else {
+                // Desktop: close other menus
+                const isOpen = item.classList.contains('open');
+                menuItems.forEach(menuItem => {
+                    menuItem.classList.remove('open');
+                });
+                if (!isOpen) {
+                    item.classList.add('open');
+                }
+            }
+        });
+    });
+
+    // Close menus when clicking outside
+    document.addEventListener('click', function (event) {
+        if (!event.target.closest('.navbar')) {
+            if (isMobile) {
+                navList.classList.remove('mobile-open');
+                hamburger.classList.remove('active');
+            }
+            menuItems.forEach(item => item.classList.remove('open'));
+        }
+    });
+
+    // Close mobile menu when a link is clicked
+    navLinks.forEach(link => {
+        link.addEventListener('click', function () {
+            if (isMobile) {
+                navList.classList.remove('mobile-open');
+                hamburger.classList.remove('active');
+            }
+        });
+    });
+</script>
+
+<script>
+    window.addEventListener('load', function () {
+        window.setTimeout(function () {
+            document.body.classList.add('page-loaded');
+            window.setTimeout(function () {
+                document.body.classList.add('page-animations-started');
+            }, 600);
+        }, 3000);
+    });
+</script>
+
+</body>
+</html>
+
+

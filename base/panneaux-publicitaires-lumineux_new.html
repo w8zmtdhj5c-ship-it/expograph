@@ -1,0 +1,1015 @@
+﻿
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Fabricant de panneau publicitaire depuis 10 ans | Pub Industrie Marrakech Maroc</title>
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Barlow+Semi+Condensed:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+<style>
+    :root {
+        --blue: #007CFF;
+        --dark-blue: #071A2B;
+        --white: #FFFFFF;
+        --light: #F5F7FA;
+        --text: #071A2B;
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        background: #fff;
+        color: var(--dark-blue);
+    }
+
+    /* =========================================
+       MAIN SECTION
+    ========================================= */
+
+    .enseigne-section {
+        width: 100%;
+    }
+
+    /* =========================================
+       EACH ROW
+    ========================================= */
+
+    .enseigne-row {
+        width: 100%;
+        min-height: 420px;
+
+        display: flex;
+        align-items: center;
+
+        padding: 50px 20px;
+    }
+
+    /* =========================================
+       CONTENT WIDTH
+    ========================================= */
+
+    .enseigne-container {
+        width: 100%;
+        max-width: 1200px;
+
+        margin: 0 auto;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        gap: 70px;
+    }
+
+    /* =========================================
+       TEXT
+    ========================================= */
+
+    .enseigne-text {
+        flex: 1;
+        max-width: 540px;
+    }
+
+    .enseigne-text h2 {
+        margin: 0 0 22px 0;
+
+        font-size: 30px;
+        line-height: 1.2;
+
+        font-weight: 700;
+
+        color: var(--dark-blue);
+    }
+
+    .enseigne-text p {
+        margin: 0 0 14px 0;
+
+        font-size: 15px;
+        line-height: 1.65;
+
+        color: var(--dark-blue);
+
+        text-align: left;
+    }
+
+    .enseigne-text strong {
+        font-weight: 700;
+    }
+
+    .blue {
+        color: var(--blue);
+    }
+
+    /* =========================================
+       IMAGE
+    ========================================= */
+
+    .enseigne-image-wrapper {
+        position: relative;
+
+        flex: 0 0 390px;
+
+        width: 390px;
+        height: 330px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        overflow: hidden;
+
+        border: 7px solid var(--blue);
+
+        border-radius:
+            48% 52% 45% 55%
+            /
+            48% 45% 55% 52%;
+    }
+
+    .enseigne-image {
+        width: 100%;
+        height: 100%;
+
+        display: block;
+
+        object-fit: cover;
+    }
+
+    /* =========================================
+       ROW 1
+       WHITE
+       TEXT LEFT / IMAGE RIGHT
+    ========================================= */
+
+    .row-one {
+        background: var(--white);
+    }
+
+    .row-one .enseigne-container {
+        flex-direction: row;
+    }
+
+    /* =========================================
+       ROW 2
+       DARK
+       IMAGE LEFT / TEXT RIGHT
+    ========================================= */
+
+    .row-two {
+        background: var(--dark-blue);
+    }
+
+    .row-two .enseigne-container {
+        flex-direction: row-reverse;
+    }
+
+    .row-two .enseigne-text h2 {
+        color: var(--white);
+    }
+
+    .row-two .enseigne-text p {
+        color: var(--white);
+    }
+
+    /* =========================================
+       ROW 3
+       WHITE
+    ========================================= */
+
+    .row-three {
+        background: var(--white);
+    }
+
+    .row-three .enseigne-container {
+        flex-direction: row;
+    }
+
+    .row-three .enseigne-image-wrapper {
+        flex: 0 0 340px;
+
+        width: 340px;
+        height: 285px;
+    }
+
+    /* =========================================
+       ROW 4
+       LIGHT
+    ========================================= */
+
+    .row-four {
+        background: var(--light);
+    }
+
+    .row-four .enseigne-container {
+        flex-direction: row-reverse;
+    }
+
+    .row-four .enseigne-image-wrapper {
+        flex: 0 0 380px;
+
+        width: 380px;
+        height: 330px;
+    }
+
+    /* =========================================
+       DESKTOP LARGE
+    ========================================= */
+
+    @media (min-width: 1400px) {
+
+        .enseigne-container {
+            max-width: 1250px;
+        }
+
+        .enseigne-row {
+            min-height: 470px;
+        }
+
+        .enseigne-text {
+            max-width: 570px;
+        }
+
+        .enseigne-text h2 {
+            font-size: 32px;
+        }
+
+        .enseigne-text p {
+            font-size: 16px;
+        }
+
+        .enseigne-image-wrapper {
+            flex-basis: 420px;
+            width: 420px;
+            height: 350px;
+        }
+
+        .row-three .enseigne-image-wrapper {
+            flex-basis: 370px;
+            width: 370px;
+            height: 310px;
+        }
+
+        .row-four .enseigne-image-wrapper {
+            flex-basis: 410px;
+            width: 410px;
+            height: 350px;
+        }
+    }
+
+    /* =========================================
+       TABLET
+    ========================================= */
+
+    @media (max-width: 900px) {
+
+        .enseigne-row {
+            min-height: auto;
+            padding: 60px 30px;
+        }
+
+        .enseigne-container {
+            max-width: 750px;
+            gap: 40px;
+        }
+
+        .enseigne-text {
+            max-width: 400px;
+        }
+
+        .enseigne-text h2 {
+            font-size: 25px;
+        }
+
+        .enseigne-text p {
+            font-size: 13px;
+        }
+
+        .enseigne-image-wrapper,
+        .row-three .enseigne-image-wrapper,
+        .row-four .enseigne-image-wrapper {
+
+            flex-basis: 280px;
+
+            width: 280px;
+            height: 250px;
+        }
+    }
+
+    /* =========================================
+       MOBILE
+    ========================================= */
+
+    @media (max-width: 650px) {
+
+        .enseigne-row {
+            min-height: auto;
+            padding: 50px 25px;
+        }
+
+        .enseigne-container,
+        .row-two .enseigne-container,
+        .row-four .enseigne-container {
+
+            flex-direction: column;
+
+            gap: 35px;
+
+            align-items: center;
+        }
+
+        .enseigne-text {
+            width: 100%;
+            max-width: 100%;
+        }
+
+        .enseigne-text h2 {
+            font-size: 25px;
+        }
+
+        .enseigne-text p {
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .enseigne-image-wrapper,
+        .row-three .enseigne-image-wrapper,
+        .row-four .enseigne-image-wrapper {
+
+            flex: none;
+
+            width: 300px;
+            height: 260px;
+        }
+    }
+
+    /* =========================================
+       SMALL MOBILE
+    ========================================= */
+
+    @media (max-width: 400px) {
+
+        .enseigne-image-wrapper,
+        .row-three .enseigne-image-wrapper,
+        .row-four .enseigne-image-wrapper {
+
+            width: 260px;
+            height: 230px;
+        }
+
+        .enseigne-text h2 {
+            font-size: 22px;
+        }
+
+        .enseigne-text p {
+            font-size: 13px;
+        }
+    }
+
+</style>
+</head>
+
+<body>
+<div class="page-loader" aria-label="Chargement" role="status">
+    <img src="asset/img/logo-white.png" alt="Expograph">
+</div>
+
+<section class="hero">
+    <div class="hero-yellow"></div>
+    <div class="logo-box">
+        <img
+            src="asset/img/logo.png"
+            alt="Expograph"
+        >
+    </div>
+    <!-- =====================================================
+         NAVIGATION
+    ====================================================== -->
+
+    <nav class="navbar">
+
+        <button class="hamburger" aria-label="Toggle menu" type="button">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <ul class="nav-list">
+
+            <li class="nav-item has-submenu">
+                <a href="#" class="nav-link menu-trigger">
+                    Enseigne
+                    <span class="arrow">â–¼</span>
+                </a>
+                <ul class="submenu">
+                    <li><a href="#">Enseignes lumineuses</a></li>
+                    <li><a href="#">Enseigne publicitaire</a></li>
+                </ul>
+            </li>
+
+            <li class="nav-item has-submenu">
+                <a href="#" class="nav-link menu-trigger">
+                    Panneau
+                    <span class="arrow">â–¼</span>
+                </a>
+                <ul class="submenu">
+                    <li><a href="#">Panneaux publicitaires lumineux</a></li>
+                    <li><a href="#">Panneaux publicitaires non lumineux</a></li>
+                    <li><a href="#">Panneaux drapeau</a></li>
+                </ul>
+            </li>
+
+            <li class="nav-item">
+                <a href="#" class="nav-link">Totem</a>
+            </li>
+
+            <li class="nav-item">
+                <a href="#" class="nav-link">SignalÃ©tique</a>
+            </li>
+
+            <li class="nav-item has-submenu">
+                <a href="#" class="nav-link menu-trigger">
+                    Habillage
+                    <span class="arrow">â–¼</span>
+                </a>
+                <ul class="submenu">
+                    <li><a href="#">Habillage voiture</a></li>
+                    <li><a href="#">Stickers muraux</a></li>
+                    <li><a href="#">Habillage de magasin</a></li>
+                </ul>
+            </li>
+
+            <li class="nav-item">
+                <a href="#" class="nav-link">Impression et SÃ©rigraphie</a>
+            </li>
+
+            <li class="nav-item">
+                <a href="#" class="nav-link">Contact</a>
+            </li>
+
+            <li class="nav-item has-submenu language-item">
+                <a href="#" class="nav-link menu-trigger language">
+                    FR
+                    <span class="arrow">â–¼</span>
+                </a>
+                <ul class="submenu language-submenu">
+                    <li><a href="#">FR</a></li>
+                    <li><a href="#">EN</a></li>
+                </ul>
+            </li>
+
+        </ul>
+
+    </nav>
+    <!-- =====================================================
+         TITLE
+    ====================================================== -->
+
+    <div class="hero-content">
+
+        <h1 class="hero-title">
+            Panneau publicitaire
+        </h1>
+
+    </div>
+    <!-- =====================================================
+         SERVICES
+    ====================================================== -->
+    <div class="services">
+        <div class="services-grid">
+            <!-- =================================================
+                 1. ENSEIGNE
+            ================================================== -->
+            <div class="service">
+                <img
+                    src="asset/img/enseigne-lumineuse.png"
+                    alt="Fabricant d'enseignes publicitaires sur mesure Ã  Oujda"
+                    title="Enseigne lumineuse sur-mesure Ã  Oujda, Maroc"
+                    class="service-image"
+                >
+                <h2 class="service-title">
+                    Enseigne Lumineuse
+                </h2>
+                <a
+                    href="/fr/nos-metiers/enseignes-lumineuses"
+                    class="service-button"
+                >
+                    Demander des infos
+                </a>
+            </div>
+            <!-- =================================================
+                 2. PANNEAU
+            ================================================== -->
+
+            <div class="service">
+                <img
+                    src="asset/img/panneau-publicitaire.png"
+                    alt="Panneau publicitaire & Plaque SignalÃ©tique Ã  Oujda, Maroc"
+                    title="Fabricant panneau publicitaire | Conception, Fabrication, Pose"
+                    class="service-image"
+                >
+                <h2 class="service-title">
+                    Panneau publicitaire
+                </h2>
+                <a
+                    href="/fr/nos-metiers/panneaux-publicitaires-lumineux"
+                    class="service-button"
+                >
+                    DÃ©couvrir
+                </a>
+            </div>
+            <!-- =================================================
+                 3. VEHICLE
+            ================================================== -->
+            <div class="service">
+                <img
+                    src="asset/img/habillage-voiture.png"
+                    alt="Habillage de voiture Marrakecha"
+                    title="Habillage et Marquage de vÃ©hicule Ã  Marrakecha"
+                    class="service-image"
+                >
+                <h2 class="service-title">
+                    Habillage de voiture
+                </h2>
+                <a
+                    href="/fr/nos-metiers/habillage-voiture"
+                    class="service-button"
+                >
+                    En savoir plus
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+<div class='enseigne-section'>
+<div class='enseigne-row row-one'>
+<div class='enseigne-container'>
+<div class='enseigne-text'>
+<h2>Panneau publicitaire en alucobond ajourÃ©</h2>
+<p>La <strong>crÃ©ation de panneau publicitaire lumineux</strong> en alucobond ajourÃ©e revient par force. Lâ€™alucobond est un support qui se compose de deux tÃ´les en aluminium ainsi que dâ€™un noyau de remplissage minÃ©ral. Le matÃ©riau est dâ€™une grande longÃ©vitÃ© et permet de multiples dÃ©coupes artistiques avec grande prÃ©cision. La fusion de lâ€™alucobond ajourÃ©e avec un Ã©clairage adaptÃ©, fera de votre <strong>panneau de publicitÃ© Ã  Marrakech</strong>, un symbole de crÃ©ativitÃ© par excellence.</p>
+<p>Vous dÃ©sirez fabriquer un <strong>panneau publicitaire de magasin</strong> ou encore un <strong>panneau publicitaire de Galerie</strong> sur-mesure ? Lâ€™entreprise PUB INDUSTRIE est Ã  votre service. Dans un monde dâ€™image et de couleurs comme le nÃ´tre, il vous sera conseillÃ© de passer au mode dâ€™enseignes lumineuses pour vous dÃ©marquer de la concurrence, ainsi que de gagner davantage en notoriÃ©tÃ© auprÃ¨s de vos prospects. Demandez le <strong>prix panneau publicitaire</strong> qui vous convient via un simple appel au numÃ©ro <a href="tel:05244-48453" target="_blank">05244-48453</a>.<br></p>
+
+</div>
+<div class='enseigne-image-wrapper'><img src='https://pub-industrie.com/img/post/167002097089845.png' alt='Panneau publicitaire en alucobond ajourÃ©' class='enseigne-image'></div>
+</div>
+</div>
+<div class='enseigne-row row-two'>
+<div class='enseigne-container'>
+<div class='enseigne-image-wrapper'><img src='https://pub-industrie.com/img/post/167002133734449.png' alt='Panneau lumineux publicitaire en plexi habillÃ©' class='enseigne-image'></div>
+<div class='enseigne-text'>
+<h2>Panneau lumineux publicitaire en plexi habillÃ©</h2>
+<p>Acteur majeur dans le domaine de la fabrication de <strong>panneau lumineux publicitaire</strong> Ã  Marrakech depuis 2014, lâ€™entreprise PUB INDUSTRIE vous assure un service qualitatif Ã  des budgets maÃ®trisÃ©s. Nous concevons et fabriquons des <strong>panneaux publicitaires lumineux en plexi habillÃ© pas cher</strong> pour tous types de commerces partout au Maroc. </p>
+<p>Notre entreprise dispose dâ€™un atelier de fabrication Ã©quipÃ© et conforme aux normes de la sÃ©curitÃ© en vigueur, dans lequel nous traitons des projets de diffÃ©rentes ampleurs. Notre Ã©quipe de designers et artisans qualifiÃ©s vous accompagnent de A Ã  Z. De plus, nous vous assurons Ã©galement les travaux de dÃ©pannage de vos <strong>pancartes publicitaires</strong> sur demande ou via un contrat dâ€™entretien annuel.</p>
+<p>Notre objectif est de communiquer autour de votre marque par les moyens les plus adaptÃ©s Ã  votre secteur dâ€™activitÃ©. RÃ©activitÃ©, adaptabilitÃ© et rigueur fondent aujourdâ€™hui notre image de marque.<br></p>
+
+</div>
+</div>
+</div>
+<div class='enseigne-row row-three'>
+<div class='enseigne-container'>
+<div class='enseigne-text'>
+<h2><span class="text-main">Pancarte</span>
+
+                                        
+                                            publicitaire
+
+                                        
+                                            lumineux
+
+                                        
+                                            en
+
+                                        
+                                            backlight</h2>
+<p>La technique du backlight est souvent liÃ©e aux secteurs de la restauration et plus particuliÃ¨rement le fast food. La pancarte publicitaire lumineux de restaurant en backlight se caractÃ©rise par sa simplicitÃ©, mais Ã©galement par sa modernitÃ©. Comme son nom lâ€™indique, ce systÃ¨me dâ€™Ã©clairage sâ€™appuie sur une luminositÃ© par lâ€™arriÃ¨re, ce qui reflÃ¨te son aspect design par excellence.</p>
+<p>Vous pouvez utiliser cette technique pour la conception dâ€™un panneau publicitaire de snack ou encore pour afficher au public votre menu dâ€™une faÃ§on Ã©lÃ©gante ; Parce que nous sommes soucieux de votre image de marque ainsi que de votre stratÃ©gie marketing, que nous mettons tout en Å“uvre, pour donner un sens Ã  votre prÃ©sence. Nous vous conseillons sur les couleurs, les dimensions et les matÃ©riaux les plus adÃ©quats en matiÃ¨re de rÃ©sistance et de longÃ©vitÃ©.</p>
+<p>Vous recherchez un fabricant de panneau publicitaire de Magasin pas cher Ã  Marrakech et partout au Maroc ? Faites appel Ã  notre savoir-faire !<br></p>
+
+</div>
+<div class='enseigne-image-wrapper'><img src='https://pub-industrie.com/img/post/167002155530188.png' alt='<span class="text-main">Pancarte</span>
+
+                                        
+                                            publicitaire
+
+                                        
+                                            lumineux
+
+                                        
+                                            en
+
+                                        
+                                            backlight' class='enseigne-image'></div>
+</div>
+</div>
+<div class='enseigne-row row-four'>
+<div class='enseigne-container'>
+<div class='enseigne-image-wrapper'><img src='https://pub-industrie.com/img/post/167002172455169.png' alt='<span class="text-main border-text-black">Panneaux</span>
+
+                                        
+                                            de
+
+                                        
+                                            publicitÃ©
+
+                                        
+                                            en
+
+                                        
+                                            lexon
+
+                                        
+                                            habillÃ©' class='enseigne-image'></div>
+<div class='enseigne-text'>
+<h2><span class="text-main border-text-black">Panneaux</span>
+
+                                        
+                                            de
+
+                                        
+                                            publicitÃ©
+
+                                        
+                                            en
+
+                                        
+                                            lexon
+
+                                        
+                                            habillÃ©</h2>
+<p>Depuis sa crÃ©ation en 2014, lâ€™entreprise PUB INDUSTRIE conÃ§oit et fabrique des <strong>panneaux publicitaires Ã©clairÃ©s Ã  Marrakech</strong> pour tous types de commerces. Nous Ã©tudions avec rigueur chaque projet de <strong>fabrication de panneau publicitaire lumineux en lexon habillÃ©</strong> partout au Maroc. </p>
+<p>Nous repoussons les limites de notre crÃ©ation afin de vous livrer une devanture de magasin Ã  la hauteur de vos attentes. Que cela soit dans le domaine de la restauration, de la vente ou dans le cadre dâ€™une autre activitÃ©, votre <strong>panneau publicitaire de boutique</strong> sera une rÃ©ussite. </p>
+<p>Pour toute demande de devis personnalisÃ©, ou pour Ã©changer avec lâ€™un de nos spÃ©cialistes, nâ€™hÃ©sitez pas de nous Ã©crire via notre <a href="/fr/contact" target="_blank">formulaire de contact</a>. Nous donnerons suite Ã  votre requÃªte, dans les dÃ©lais les plus courts. PUB INDUSTRIE, votre <strong>spÃ©cialiste de panneau publicitaire au Maroc</strong>.<br></p>
+
+</div>
+</div>
+</div>
+<div class='enseigne-row row-one'>
+<div class='enseigne-container'>
+<div class='enseigne-text'>
+<h2><span class="text-main">Panneau</span>
+
+                                        
+                                            signalÃ©tique
+
+                                        
+                                            lumineux
+
+                                        
+                                            en
+
+                                        
+                                            tÃ´le
+
+                                        
+                                            ajourÃ©e</h2>
+<p>Les panneaux signalÃ©tiques lumineux en tÃ´le ajourÃ©e sont lâ€™un des supports de communication tendance en ce moment. La tÃ´le ajourÃ©e ou perforÃ©e offre une possibilitÃ© de dimensions sur-mesure. Quelle que soit la dÃ©coupe que vous dÃ©sirez rÃ©aliser ou la mise en forme Ã  fabriquer, notre Ã©quipe dâ€™artisans qualifiÃ©e est Ã  votre Ã©coute !</p>
+<p>Vous cherchez un prix panneau publicitaire raisonnable et une qualitÃ© de travail irrÃ©prochable ? Sollicitez notre service ! Parce que votre magasin mÃ©rite une meilleure visibilitÃ©, notre Ã©quipe se dÃ©place chez vous, prend les mesures nÃ©cessaires, et vous propose les matÃ©riaux de base ainsi que les solutions lumineuses les plus adÃ©quates.</p>
+<p>Quâ€™il sâ€™agisse de panneaux signalÃ©tiques extÃ©rieurs pour magasin, commerce, restaurant ou galerie, nous saurons vous proposer le type dâ€™enseigne convenable pour votre stratÃ©gie marketing. Vous bÃ©nÃ©ficierez ainsi dâ€™une force de sÃ©duction inÃ©dite.<br></p>
+
+</div>
+<div class='enseigne-image-wrapper'><img src='' alt='<span class="text-main">Panneau</span>
+
+                                        
+                                            signalÃ©tique
+
+                                        
+                                            lumineux
+
+                                        
+                                            en
+
+                                        
+                                            tÃ´le
+
+                                        
+                                            ajourÃ©e' class='enseigne-image'></div>
+</div>
+</div>
+<div class='enseigne-row row-two'>
+<div class='enseigne-container'>
+<div class='enseigne-image-wrapper'><img src='https://pub-industrie.com/img/post/167146088847059.png' alt='Panneau lumineux publicitaire  marquÃ© en leds' class='enseigne-image'></div>
+<div class='enseigne-text'>
+<h2>Panneau lumineux publicitaire  marquÃ© en leds</h2>
+<p>Le <strong>panneau publicitaire leds</strong> est une excellente solution pour marquer votre communication visuelle. GrÃ¢ce Ã  un choix de support idÃ©al pour votre enseigne ainsi que la densitÃ© de la luministe adaptÃ©e, vous obtiendrez la meilleure identification Ã  votre magasin. </p>
+<p>Vous dÃ©sirez fabriquer un <strong>panneau publicitaire lumineux marquÃ© en leds</strong> sur-mesure ? CrÃ©er un affichage unique qui vÃ©hicule Ã  la perfection votre image de marque ? Faites appel au savoir-faire de notre entreprise. Depuis 2014, nous opÃ©rons dans le domaine de la conception et de la fabrication de diffÃ©rents types de panneaux lumineux. </p>
+<p>Nous prenons en considÃ©ration plusieurs Ã©lÃ©ments dans chaque projet de crÃ©ation ou dâ€™entretien, Ã  savoir : lâ€™activitÃ© du client, lâ€™aspect architectural de la faÃ§ade, ainsi que la surface allouÃ©e Ã  la pose de la <strong>pancarte publicitaire</strong>. Lâ€™Ã©tude des dits Ã©lÃ©ments nous aide Ã  la crÃ©ation dâ€™une enseigne Ã  leds Ã  la fois Ã©conomique et Ã©cologique. <br></p>
+
+</div>
+</div>
+</div>
+<div class='enseigne-row row-three'>
+<div class='enseigne-container'>
+<div class='enseigne-text'>
+<h2>Panneau lumineux publicitaire Ã  Ã©cran leds</h2>
+<p>AmÃ©liorez et renforcez votre communication visuelle grÃ¢ce au <strong>panneau publicitaire lumineux Ã©cran leds</strong>. La dynamicitÃ© du <strong>panneau publicitaire animÃ©e</strong>, vous offre toutes les chances de maximiser la visibilitÃ© de votre commerce, sois plus de clients potentiels qui franchiront votre porte. </p>
+<p>La <strong>fabrication de panneau publicitaire Marrakech</strong> se fait selon plusieurs critÃ¨res. Dâ€™une partie plus technique, la clartÃ© de lâ€™image ou du texte affichÃ© sur votre Ã©cran led dÃ©pend des Â« pitchs Â». Le terme dÃ©signe la dimension entre les leds et câ€™est ce qui dÃ©finit la rÃ©solution dâ€™un Ã©cran. GÃ©nÃ©ralement, plus le pitch est rapprochÃ©, plus lâ€™image est plus lisible et vice versa.</p>
+<p>La led pour sa part, remplace actuellement les modes dâ€™Ã©clairage traditionnels, Ã  savoir les ampoules Ã  incandescence ou halogÃ¨ne. Cela grÃ¢ce au facteur Ã©conomique de cette Ã©nergie ainsi que de son cout de maintenance rÃ©duit.<br></p>
+
+</div>
+<div class='enseigne-image-wrapper'><img src='https://pub-industrie.com/img/post/167016055394550.png' alt='Panneau lumineux publicitaire Ã  Ã©cran leds' class='enseigne-image'></div>
+</div>
+</div>
+<div class='enseigne-row row-four'>
+<div class='enseigne-container'>
+<div class='enseigne-image-wrapper'><img src='https://pub-industrie.com/img/post/pub-industrie-2.png' alt='<span class="text-main">Affiche</span>
+
+                                        
+                                            publicitaire
+
+                                        
+                                            lumineuse
+
+                                        
+                                            leds' class='enseigne-image'></div>
+<div class='enseigne-text'>
+<h2><span class="text-main">Affiche</span>
+
+                                        
+                                            publicitaire
+
+                                        
+                                            lumineuse
+
+                                        
+                                            leds</h2>
+<p>PUB INDUSTRIE, entreprise de <b>panneau publicitaire Ã  Marrakech</b>, vous propose une gamme complÃ¨te dâ€™<b>affiches lumineuses leds</b> pour commerces et entreprises. RÃ©putÃ©s pour notre rigueur et la qualitÃ© de nos rendus, nous sommes en mesure de rÃ©pondre Ã  vos attentes dans les meilleurs dÃ©lais.</p>
+<p>Notre Ã©quipe de designers et dâ€™artisans qualifiÃ©e, vous aidera dans le choix de lâ€™<b>affiche lumineuse leds</b> la plus adaptÃ©e Ã  votre faÃ§ade. Votre communication visuelle marquera lâ€™esprit de vos prospects et sera un support essentiel pour la promotion de votre service. Nous assurons non seulement le processus de fabrication, mais Ã©galement le service de dÃ©pannage et de la maintenance de votre affiche.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </p>
+<p>Pour un projet de conception et de pose de <b>panneau publicitaire nÃ©on Ã  Marrakech</b> sur-mesure Ã  <b>un prix maÃ®trisÃ©</b>, nâ€™hÃ©sitez pas de nous contacter. Nous sommes Ã  votre service via un simple appel au :&nbsp; <a href="tel:05244-48453" target="_blank">05244-48453</a>.<br></p>
+
+</div>
+</div>
+</div>
+<div class='enseigne-row row-one'>
+<div class='enseigne-container'>
+<div class='enseigne-text'>
+<h2><span class="text-main border-text-black">Panneau</span>
+
+                                        
+                                            lumineux
+
+                                        
+                                            publicitaire
+
+                                        
+                                            Ã 
+
+                                        
+                                            lettres
+
+                                        
+                                            superposÃ©es</h2>
+<p>La conception de panneaux publicitaires vintage Ã  lettres superposÃ©es, convient pour une pose Ã  lâ€™extÃ©rieur comme Ã  lâ€™intÃ©rieur. Avec un emplacement superposÃ© des lettres (PosÃ©es lâ€™une sur les autres) le design et le raffinement sâ€™inviteront chez vous. </p>
+<p>Pour la rÃ©alisation dâ€™un panneau publicitaire lumineux Ã  lettres superposÃ©es Ã  Marrakech, nous mettons tout en Å“uvre pour que votre affiche soit lisible, identifiable, mais au mÃªme temps trÃ¨s expressifs. </p>
+<p>Notre expertise accumulÃ©e de nos annÃ©es de travail, nous permettent aujourdâ€™hui, de vous faire une sÃ©lection harmonieuse de matÃ©riaux, de dÃ©coupe et de luminositÃ©. Sois une installation de panneau publicitaire de luxe, Ã  un prix trÃ¨s rationnel.</p>
+<p>Quâ€™attendez-vous pour nous confier votre communication visuelle ? Pour plus de renseignements, nâ€™hÃ©sitez pas de nous contacter au numÃ©ro : <a href="tel:05244-48453" target="_blank">05244-48453</a>, ou via notre <a href="/fr/contact" target="_blank">formulaire de contact</a>.<br></p>
+
+</div>
+<div class='enseigne-image-wrapper'><img src='https://pub-industrie.com/img/post/16701625236658.png' alt='<span class="text-main border-text-black">Panneau</span>
+
+                                        
+                                            lumineux
+
+                                        
+                                            publicitaire
+
+                                        
+                                            Ã 
+
+                                        
+                                            lettres
+
+                                        
+                                            superposÃ©es' class='enseigne-image'></div>
+</div>
+</div>
+
+</div>
+<footer class="site-footer">
+
+    <div class="footer-inner">
+
+        <div class="footer-grid">
+
+            <div class="footer-block contact-block">
+
+                <h3 class="footer-title">
+                    Commencer<br>
+                    votre projet<br>
+                    <span>tout de suite</span>
+                </h3>
+
+                <ul class="footer-contact-list">
+                    <li>
+                        <a href="tel:+2125">â˜Ž +212 </a>
+                    </li>
+                    <li>
+                        <a href="tel:+2120676487566">âœ† +212 676 487 566</a>
+                    </li>
+                    <li>
+                        <a href="mailto:expograph@gmail.com">âœ‰ expograph@gmail.com</a>
+                    </li>
+                </ul>
+
+                <div class="map-box">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3967.687466252411!2d-1.9402769000000004!3d34.703443!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd78636be90cc269%3A0xe4fa65782a6ea741!2sExpoGraph%20%7C%20Panneaux%20Publicitaires%203D%20Oujda!5e1!3m2!1sfr!2sma!4v1787654601787!5m2!1sfr!2sma"
+                     width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" 
+                     referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                </div>
+
+            </div>
+
+            <div class="footer-block info-block">
+
+                <h3 class="arabic-title">ØµÙ†Ø§Ø¹Ø© Ø§Ù„Ø¥Ø´Ù‡Ø§Ø± ÙÙ† ÙˆØ§Ø¨Ø¯Ø§Ø¹</h3>
+
+                <div class="info-columns">
+
+                    <div class="info-column">
+                        <h4>Horaires</h4>
+                        <div class="hours-list">
+                            <p>Lundi au vendredi</p>
+                            <span>09:00 Ã  13:00</span>
+                            <span>14:00 Ã  18:00</span>
+                            <p>Samedi</p>
+                            <span>09:00 Ã  13:00</span>
+                            <p>Dimanche</p>
+                            <span>FermÃ©</span>
+                        </div>
+                    </div>
+
+                    <div class="info-column">
+                        <h4>Menu</h4>
+                        <ul class="footer-menu">
+                            <li><a href="#">Qui-sommes nous?</a></li>
+                            <li><a href="#">RÃ©alisations</a></li>
+                            <li><a href="#">Palissades de chantier</a></li>
+                            <li><a href="#">PLV et supports</a></li>
+                            <li><a href="#">Blog</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="info-column">
+                        <h4>Adresse</h4>
+                        <p>
+                            2eme Etg NÂ°03, NÂ°06 Rue Abou Obeida Ibn Al Jarrah<br>
+                            Oujda 60000.
+                        </p>
+                    </div>
+
+                    <div class="info-column">
+                        <h4>LÃ©gale</h4>
+                        <ul class="footer-menu">
+                            <li><a href="#">Politique de confidentialitÃ©</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="footer-block sketch-block">
+                <div class="sketch-plate">
+                    <div class="sketch-mark">
+                        <img src="https://pub-industrie.com/img/main/Sketch.svg" alt="Art graphic">
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-block form-block">
+
+                <h3>Vous avez un projet<br>contactez nous tout de suite</h3>
+
+                <form class="contact-form">
+                    <input type="text" placeholder="Votre nom et prÃ©nom*">
+                    <input type="tel" placeholder="Votre numÃ©ro de tÃ©lÃ©phone*">
+                    <input type="email" placeholder="Votre Email">
+                    <textarea rows="5" placeholder="Votre message"></textarea>
+                    <button type="submit">Envoyer</button>
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+
+        <div class="social-row">
+            <a href="#" aria-label="Facebook">f</a>
+            <a href="#" aria-label="Pinterest">P</a>
+            <a href="#" aria-label="Instagram">â—Ž</a>
+            <a href="#" aria-label="YouTube">â—‰</a>
+            <a href="#" aria-label="LinkedIn">in</a>
+            <a href="#" aria-label="Quora">Q</a>
+        </div>
+
+        <p>
+            Les marques dÃ©posÃ©es sont la propriÃ©tÃ© de leurs propriÃ©taires respectifs.<br>
+            Â© 2008-2026 Pub industrie.
+        </p>
+
+    </div>
+
+</footer>
+
+<script>
+    const hamburger = document.querySelector('.hamburger');
+    const navList = document.querySelector('.nav-list');
+    const menuItems = document.querySelectorAll('.nav-item.has-submenu');
+    const navLinks = document.querySelectorAll('.nav-link:not(.menu-trigger)');
+
+    let isMobile = window.innerWidth <= 768;
+
+    // Update mobile status on resize
+    window.addEventListener('resize', () => {
+        isMobile = window.innerWidth <= 768;
+        if (window.innerWidth > 768) {
+            navList.classList.remove('mobile-open');
+            hamburger.classList.remove('active');
+        }
+    });
+
+    // Hamburger menu toggle for mobile
+    if (hamburger) {
+        hamburger.addEventListener('click', function (event) {
+            event.stopPropagation();
+            hamburger.classList.toggle('active');
+            navList.classList.toggle('mobile-open');
+        });
+    }
+
+    // Handle submenu toggles
+    menuItems.forEach(item => {
+        const trigger = item.querySelector('.menu-trigger');
+        if (!trigger) return;
+
+        trigger.addEventListener('click', function (event) {
+            event.preventDefault();
+            event.stopPropagation();
+
+            if (isMobile) {
+                // Mobile: toggle this menu only
+                item.classList.toggle('open');
+            } else {
+                // Desktop: close other menus
+                const isOpen = item.classList.contains('open');
+                menuItems.forEach(menuItem => {
+                    menuItem.classList.remove('open');
+                });
+                if (!isOpen) {
+                    item.classList.add('open');
+                }
+            }
+        });
+    });
+
+    // Close menus when clicking outside
+    document.addEventListener('click', function (event) {
+        if (!event.target.closest('.navbar')) {
+            if (isMobile) {
+                navList.classList.remove('mobile-open');
+                hamburger.classList.remove('active');
+            }
+            menuItems.forEach(item => item.classList.remove('open'));
+        }
+    });
+
+    // Close mobile menu when a link is clicked
+    navLinks.forEach(link => {
+        link.addEventListener('click', function () {
+            if (isMobile) {
+                navList.classList.remove('mobile-open');
+                hamburger.classList.remove('active');
+            }
+        });
+    });
+</script>
+
+<script>
+    window.addEventListener('load', function () {
+        window.setTimeout(function () {
+            document.body.classList.add('page-loaded');
+            window.setTimeout(function () {
+                document.body.classList.add('page-animations-started');
+            }, 600);
+        }, 3000);
+    });
+</script>
+
+</body>
+</html>
+
+

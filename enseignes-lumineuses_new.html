@@ -1,0 +1,1015 @@
+﻿
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Les meilleures enseignes lumineuses | Pub Industrie Marrakech Maroc</title>
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Barlow+Semi+Condensed:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+<style>
+    :root {
+        --blue: #007CFF;
+        --dark-blue: #071A2B;
+        --white: #FFFFFF;
+        --light: #F5F7FA;
+        --text: #071A2B;
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        background: #fff;
+        color: var(--dark-blue);
+    }
+
+    /* =========================================
+       MAIN SECTION
+    ========================================= */
+
+    .enseigne-section {
+        width: 100%;
+    }
+
+    /* =========================================
+       EACH ROW
+    ========================================= */
+
+    .enseigne-row {
+        width: 100%;
+        min-height: 420px;
+
+        display: flex;
+        align-items: center;
+
+        padding: 50px 20px;
+    }
+
+    /* =========================================
+       CONTENT WIDTH
+    ========================================= */
+
+    .enseigne-container {
+        width: 100%;
+        max-width: 1200px;
+
+        margin: 0 auto;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        gap: 70px;
+    }
+
+    /* =========================================
+       TEXT
+    ========================================= */
+
+    .enseigne-text {
+        flex: 1;
+        max-width: 540px;
+    }
+
+    .enseigne-text h2 {
+        margin: 0 0 22px 0;
+
+        font-size: 30px;
+        line-height: 1.2;
+
+        font-weight: 700;
+
+        color: var(--dark-blue);
+    }
+
+    .enseigne-text p {
+        margin: 0 0 14px 0;
+
+        font-size: 15px;
+        line-height: 1.65;
+
+        color: var(--dark-blue);
+
+        text-align: left;
+    }
+
+    .enseigne-text strong {
+        font-weight: 700;
+    }
+
+    .blue {
+        color: var(--blue);
+    }
+
+    /* =========================================
+       IMAGE
+    ========================================= */
+
+    .enseigne-image-wrapper {
+        position: relative;
+
+        flex: 0 0 390px;
+
+        width: 390px;
+        height: 330px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        overflow: hidden;
+
+        border: 7px solid var(--blue);
+
+        border-radius:
+            48% 52% 45% 55%
+            /
+            48% 45% 55% 52%;
+    }
+
+    .enseigne-image {
+        width: 100%;
+        height: 100%;
+
+        display: block;
+
+        object-fit: cover;
+    }
+
+    /* =========================================
+       ROW 1
+       WHITE
+       TEXT LEFT / IMAGE RIGHT
+    ========================================= */
+
+    .row-one {
+        background: var(--white);
+    }
+
+    .row-one .enseigne-container {
+        flex-direction: row;
+    }
+
+    /* =========================================
+       ROW 2
+       DARK
+       IMAGE LEFT / TEXT RIGHT
+    ========================================= */
+
+    .row-two {
+        background: var(--dark-blue);
+    }
+
+    .row-two .enseigne-container {
+        flex-direction: row-reverse;
+    }
+
+    .row-two .enseigne-text h2 {
+        color: var(--white);
+    }
+
+    .row-two .enseigne-text p {
+        color: var(--white);
+    }
+
+    /* =========================================
+       ROW 3
+       WHITE
+    ========================================= */
+
+    .row-three {
+        background: var(--white);
+    }
+
+    .row-three .enseigne-container {
+        flex-direction: row;
+    }
+
+    .row-three .enseigne-image-wrapper {
+        flex: 0 0 340px;
+
+        width: 340px;
+        height: 285px;
+    }
+
+    /* =========================================
+       ROW 4
+       LIGHT
+    ========================================= */
+
+    .row-four {
+        background: var(--light);
+    }
+
+    .row-four .enseigne-container {
+        flex-direction: row-reverse;
+    }
+
+    .row-four .enseigne-image-wrapper {
+        flex: 0 0 380px;
+
+        width: 380px;
+        height: 330px;
+    }
+
+    /* =========================================
+       DESKTOP LARGE
+    ========================================= */
+
+    @media (min-width: 1400px) {
+
+        .enseigne-container {
+            max-width: 1250px;
+        }
+
+        .enseigne-row {
+            min-height: 470px;
+        }
+
+        .enseigne-text {
+            max-width: 570px;
+        }
+
+        .enseigne-text h2 {
+            font-size: 32px;
+        }
+
+        .enseigne-text p {
+            font-size: 16px;
+        }
+
+        .enseigne-image-wrapper {
+            flex-basis: 420px;
+            width: 420px;
+            height: 350px;
+        }
+
+        .row-three .enseigne-image-wrapper {
+            flex-basis: 370px;
+            width: 370px;
+            height: 310px;
+        }
+
+        .row-four .enseigne-image-wrapper {
+            flex-basis: 410px;
+            width: 410px;
+            height: 350px;
+        }
+    }
+
+    /* =========================================
+       TABLET
+    ========================================= */
+
+    @media (max-width: 900px) {
+
+        .enseigne-row {
+            min-height: auto;
+            padding: 60px 30px;
+        }
+
+        .enseigne-container {
+            max-width: 750px;
+            gap: 40px;
+        }
+
+        .enseigne-text {
+            max-width: 400px;
+        }
+
+        .enseigne-text h2 {
+            font-size: 25px;
+        }
+
+        .enseigne-text p {
+            font-size: 13px;
+        }
+
+        .enseigne-image-wrapper,
+        .row-three .enseigne-image-wrapper,
+        .row-four .enseigne-image-wrapper {
+
+            flex-basis: 280px;
+
+            width: 280px;
+            height: 250px;
+        }
+    }
+
+    /* =========================================
+       MOBILE
+    ========================================= */
+
+    @media (max-width: 650px) {
+
+        .enseigne-row {
+            min-height: auto;
+            padding: 50px 25px;
+        }
+
+        .enseigne-container,
+        .row-two .enseigne-container,
+        .row-four .enseigne-container {
+
+            flex-direction: column;
+
+            gap: 35px;
+
+            align-items: center;
+        }
+
+        .enseigne-text {
+            width: 100%;
+            max-width: 100%;
+        }
+
+        .enseigne-text h2 {
+            font-size: 25px;
+        }
+
+        .enseigne-text p {
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .enseigne-image-wrapper,
+        .row-three .enseigne-image-wrapper,
+        .row-four .enseigne-image-wrapper {
+
+            flex: none;
+
+            width: 300px;
+            height: 260px;
+        }
+    }
+
+    /* =========================================
+       SMALL MOBILE
+    ========================================= */
+
+    @media (max-width: 400px) {
+
+        .enseigne-image-wrapper,
+        .row-three .enseigne-image-wrapper,
+        .row-four .enseigne-image-wrapper {
+
+            width: 260px;
+            height: 230px;
+        }
+
+        .enseigne-text h2 {
+            font-size: 22px;
+        }
+
+        .enseigne-text p {
+            font-size: 13px;
+        }
+    }
+
+</style>
+</head>
+
+<body>
+<div class="page-loader" aria-label="Chargement" role="status">
+    <img src="asset/img/logo-white.png" alt="Expograph">
+</div>
+
+<section class="hero">
+    <div class="hero-yellow"></div>
+    <div class="logo-box">
+        <img
+            src="asset/img/logo.png"
+            alt="Expograph"
+        >
+    </div>
+    <!-- =====================================================
+         NAVIGATION
+    ====================================================== -->
+
+    <nav class="navbar">
+
+        <button class="hamburger" aria-label="Toggle menu" type="button">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <ul class="nav-list">
+
+            <li class="nav-item has-submenu">
+                <a href="#" class="nav-link menu-trigger">
+                    Enseigne
+                    <span class="arrow">â–¼</span>
+                </a>
+                <ul class="submenu">
+                    <li><a href="#">Enseignes lumineuses</a></li>
+                    <li><a href="#">Enseigne publicitaire</a></li>
+                </ul>
+            </li>
+
+            <li class="nav-item has-submenu">
+                <a href="#" class="nav-link menu-trigger">
+                    Panneau
+                    <span class="arrow">â–¼</span>
+                </a>
+                <ul class="submenu">
+                    <li><a href="#">Panneaux publicitaires lumineux</a></li>
+                    <li><a href="#">Panneaux publicitaires non lumineux</a></li>
+                    <li><a href="#">Panneaux drapeau</a></li>
+                </ul>
+            </li>
+
+            <li class="nav-item">
+                <a href="#" class="nav-link">Totem</a>
+            </li>
+
+            <li class="nav-item">
+                <a href="#" class="nav-link">SignalÃ©tique</a>
+            </li>
+
+            <li class="nav-item has-submenu">
+                <a href="#" class="nav-link menu-trigger">
+                    Habillage
+                    <span class="arrow">â–¼</span>
+                </a>
+                <ul class="submenu">
+                    <li><a href="#">Habillage voiture</a></li>
+                    <li><a href="#">Stickers muraux</a></li>
+                    <li><a href="#">Habillage de magasin</a></li>
+                </ul>
+            </li>
+
+            <li class="nav-item">
+                <a href="#" class="nav-link">Impression et SÃ©rigraphie</a>
+            </li>
+
+            <li class="nav-item">
+                <a href="#" class="nav-link">Contact</a>
+            </li>
+
+            <li class="nav-item has-submenu language-item">
+                <a href="#" class="nav-link menu-trigger language">
+                    FR
+                    <span class="arrow">â–¼</span>
+                </a>
+                <ul class="submenu language-submenu">
+                    <li><a href="#">FR</a></li>
+                    <li><a href="#">EN</a></li>
+                </ul>
+            </li>
+
+        </ul>
+
+    </nav>
+    <!-- =====================================================
+         TITLE
+    ====================================================== -->
+
+    <div class="hero-content">
+
+        <h1 class="hero-title">
+            Panneau publicitaire
+        </h1>
+
+    </div>
+    <!-- =====================================================
+         SERVICES
+    ====================================================== -->
+    <div class="services">
+        <div class="services-grid">
+            <!-- =================================================
+                 1. ENSEIGNE
+            ================================================== -->
+            <div class="service">
+                <img
+                    src="asset/img/enseigne-lumineuse.png"
+                    alt="Fabricant d'enseignes publicitaires sur mesure Ã  Oujda"
+                    title="Enseigne lumineuse sur-mesure Ã  Oujda, Maroc"
+                    class="service-image"
+                >
+                <h2 class="service-title">
+                    Enseigne Lumineuse
+                </h2>
+                <a
+                    href="/fr/nos-metiers/enseignes-lumineuses"
+                    class="service-button"
+                >
+                    Demander des infos
+                </a>
+            </div>
+            <!-- =================================================
+                 2. PANNEAU
+            ================================================== -->
+
+            <div class="service">
+                <img
+                    src="asset/img/panneau-publicitaire.png"
+                    alt="Panneau publicitaire & Plaque SignalÃ©tique Ã  Oujda, Maroc"
+                    title="Fabricant panneau publicitaire | Conception, Fabrication, Pose"
+                    class="service-image"
+                >
+                <h2 class="service-title">
+                    Panneau publicitaire
+                </h2>
+                <a
+                    href="/fr/nos-metiers/panneaux-publicitaires-lumineux"
+                    class="service-button"
+                >
+                    DÃ©couvrir
+                </a>
+            </div>
+            <!-- =================================================
+                 3. VEHICLE
+            ================================================== -->
+            <div class="service">
+                <img
+                    src="asset/img/habillage-voiture.png"
+                    alt="Habillage de voiture Marrakecha"
+                    title="Habillage et Marquage de vÃ©hicule Ã  Marrakecha"
+                    class="service-image"
+                >
+                <h2 class="service-title">
+                    Habillage de voiture
+                </h2>
+                <a
+                    href="/fr/nos-metiers/habillage-voiture"
+                    class="service-button"
+                >
+                    En savoir plus
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+<div class='enseigne-section'>
+<div class='enseigne-row row-one'>
+<div class='enseigne-container'>
+<div class='enseigne-text'>
+<h2>Enseignes publicitaires en plexiglas</h2>
+<p>Vous recherchez un spÃ©cialiste dans la crÃ©ation ainsi que la fabrication dâ€™<strong>enseigne publicitaire lumineuse en plexiglas Ã  Marrakech au Maroc</strong> ? Lâ€™entreprise PUB INDUSTRIE est lâ€™enseigne de rÃ©fÃ©rence quâ€™il vous faut. GrÃ¢ce Ã  une Ã©quipe dâ€™artisans qualifiÃ©e et rÃ©guliÃ¨rement formÃ©e aux nouveautÃ©s du mÃ©tier, nous vous fournissons un service de crÃ©ation dâ€™enseigne publicitaire sur-mesure.
+</p>
+<p>Notre entreprise dispose des locaux adaptÃ©s ainsi que des matÃ©riaux de derniÃ¨re gÃ©nÃ©ration, pour rÃ©pondre Ã  la spÃ©cificitÃ© de chaque projet de fabrication dâ€™enseigne au Maroc. Lâ€™acrylique est un matÃ©riau dâ€™une bonne rÃ©sistance aux intempÃ©ries extÃ©rieures, de plus, il est facile Ã  entretenir. 
+</p>
+<p>Ã€ lâ€™heure actuelle, le plexiglas rentre dans plusieurs utilisations liÃ©es Ã  la publicitÃ©, notamment, le lettrage dâ€™enseigne lumineuse, les signalÃ©tiques, les prÃ©sentoirs, sans oublier lâ€™agencement des magasins et des vitrines. Pour un prix enseigne publicitaire maÃ®trisÃ©, nâ€™hÃ©sitez pas de nous contacter via le tÃ©lÃ©phone ou par Ã©mail.</p>
+
+</div>
+<div class='enseigne-image-wrapper'><img src='https://pub-industrie.com/img/post/166989264776874.png' alt='Enseignes publicitaires en plexiglas' class='enseigne-image'></div>
+</div>
+</div>
+<div class='enseigne-row row-two'>
+<div class='enseigne-container'>
+<div class='enseigne-image-wrapper'><img src='https://pub-industrie.com/img/post/166989350167825.png' alt='Enseigne lumineuse en mÃ©tal et plexiglas' class='enseigne-image'></div>
+<div class='enseigne-text'>
+<h2>Enseigne lumineuse en mÃ©tal et plexiglas</h2>
+<p>Faire le choix dâ€™une enseigne publicitaire en mÃ©tal et plexiglas est un atout majeur pour votre communication dâ€™entreprise. Une <strong>enseigne lumineuse</strong> offre de la visibilitÃ© Ã  votre identitÃ© tout en vous distinguant de la concurrence.  Notre <strong>entreprise dâ€™enseigne publicitaire</strong> vous propose un service de conception, de fabrication et dâ€™installation dâ€™<strong>enseigne publicitaire extÃ©rieure</strong> sur-mesure. 
+</p>
+<p>Pour aboutir Ã  une rÃ©alisation dâ€™enseigne professionnelle, nous procÃ©dons Ã  une minutieuse Ã©tude de projet. Quâ€™il sâ€™agisse dâ€™un petit chantier ou dâ€™un grand projet, notre persÃ©vÃ©rance est toujours la mÃªme. Nous nous dÃ©plaÃ§ons chez notre client pour Ã©changer autour de son projet, ainsi que pour lui proposer les solutions techniques idÃ©ales Ã  son enseigne. 
+</p>
+<p>Vous Ãªtes Ã  la recherche dâ€™un spÃ©cialiste en <strong>enseigne Ã©clairÃ©e Ã  Marrakech</strong> ? Lâ€™entreprise PUB INDUSTRIE est le professionnel quâ€™il vous faut. Pour une Ã©ventuelle demande de devis, nâ€™hÃ©sitez pas de communiquer avec nous via notre <a href="/fr/contact" target="_blank">formulaire de contact</a>.</p>
+
+</div>
+</div>
+</div>
+<div class='enseigne-row row-three'>
+<div class='enseigne-container'>
+<div class='enseigne-text'>
+<h2><span class="text-main">Enseigne</span>
+
+                                        
+                                            de
+
+                                        
+                                            magasin
+
+                                        
+                                            en
+
+                                        
+                                            inox
+
+                                        
+                                            dorÃ©</h2>
+<p>Une enseigne publicitaire de magasin joue un rÃ´le important dans la stratÃ©gie marketing de chaque entreprise. Câ€™est un excellent moyen pour capter toute lâ€™attention de vos prospects. Dans le but de vous assurer une bonne communication, ainsi que pour se dÃ©marquer de votre voisinage, PUB INDUSTRIE vous propose son service de conception et de pose dâ€™<b>enseigne publicitaire lumineuse en inox dorÃ©</b> pour toutes les surfaces.  
+</p>
+<p>Lâ€™effet visuel que vous procure la fusion entre lâ€™inox et le plexiglas, vous permettra de faire passer un message publicitaire simple et beau. GrÃ¢ce Ã  notre savoir-faire, nous sommes en mesure de vous livrer une <b>enseigne publicitaire pas chÃ¨re</b> avec une qualitÃ© de finition irrÃ©prochable. 
+</p>
+<p>PUB INDUSTRIE est votre <b>enseigniste Marrakech</b> de rÃ©fÃ©rence depuis 2014. Vous pouvez nous contacter pour la conception, la fabrication et la pose de tous types dâ€™enseigne au Maroc. Quâ€™il sâ€™agisse dâ€™une <b>enseigne publicitaire pour restaurant</b>, snack ou galerie, la lumiÃ¨re sâ€™offre Ã  vous Ã  des prix compÃ©titifs.</p>
+
+</div>
+<div class='enseigne-image-wrapper'><img src='https://pub-industrie.com/img/post/167144877920257.png' alt='<span class="text-main">Enseigne</span>
+
+                                        
+                                            de
+
+                                        
+                                            magasin
+
+                                        
+                                            en
+
+                                        
+                                            inox
+
+                                        
+                                            dorÃ©' class='enseigne-image'></div>
+</div>
+</div>
+<div class='enseigne-row row-four'>
+<div class='enseigne-container'>
+<div class='enseigne-image-wrapper'><img src='https://pub-industrie.com/img/post/166989537916714.png' alt='<span class="text-main border-text-black">Enseigne</span>
+
+                                        
+                                            publicitaire
+
+                                        
+                                            en
+
+                                        
+                                            mÃ©tal
+
+                                        
+                                            perforÃ©
+
+                                        
+                                            et
+
+                                        
+                                            plexiglas' class='enseigne-image'></div>
+<div class='enseigne-text'>
+<h2><span class="text-main border-text-black">Enseigne</span>
+
+                                        
+                                            publicitaire
+
+                                        
+                                            en
+
+                                        
+                                            mÃ©tal
+
+                                        
+                                            perforÃ©
+
+                                        
+                                            et
+
+                                        
+                                            plexiglas</h2>
+<p>Parmi notre large collection de produits phares, nous proposons la pose dâ€™<strong>enseigne publicitaire lumineuse en mÃ©tal perforÃ© et plexiglas</strong>. Une rÃ©fÃ©rence de rÃ©sistance, de durabilitÃ©, mais Ã©galement de goÃ»t raffinÃ©. Nous sommes en mesure de rÃ©aliser des perforations de toutes les formes Ã  savoir : la perforation carrÃ©e, en quinconce ou encore la perforation linÃ©aire. En matiÃ¨re de mÃ©taux, vous pouvez faire votre choix entre : lâ€™aluminium, lâ€™acier ou encore lâ€™inox.</p>
+<p>Depuis 2014, PUB INDUSTRIE rÃ©alise diffÃ©rentes <strong>enseignes publicitaires de commerce</strong>, dÃ©diÃ©s Ã  dÃ©velopper la notoriÃ©tÃ© de chaque entreprise quelle que soit sa taille. Notre client est au cÅ“ur de tout le processus de la crÃ©ation de son enseigne. Nous Ã©changeons avec lui durant lâ€™Ã©tude du projet, en passant par la production jusquâ€™Ã  la pose finale. Notre accompagnement, se poursuit avec un service aprÃ¨s-vente Ã  la hauteur de notre image de marque.</p>
+
+</div>
+</div>
+</div>
+<div class='enseigne-row row-one'>
+<div class='enseigne-container'>
+<div class='enseigne-text'>
+<h2><span class="text-main">Enseigne</span>
+
+                                        
+                                            dâ€™entreprise
+
+                                        
+                                            en
+
+                                        
+                                            inox
+
+                                        
+                                            perforÃ©
+
+                                        
+                                            et
+
+                                        
+                                            plexiglas</h2>
+<p>Vous dÃ©sirez revoir votre <strong>pancarte publicitaire</strong> ? Vous recherchez un matÃ©riau Ã  la fois dÃ©coratif et rÃ©sistible ? Lâ€™enseigne publicitaire lumineuse en inox perforÃ© et plexiglas est le choix idÃ©al pour vous ! </p>
+<p>
+Lâ€™inox perforÃ© rentre actuellement dans plusieurs secteurs, nous citons comme exemple : lâ€™Ã©lectromÃ©nager, les objets dÃ©coratifs, lâ€™habitat, etc. Lâ€™application de ce matÃ©riau, particuliÃ¨rement dans la publicitÃ©, revient Ã  sa rÃ©sistance Ã  la corrosion et sa durabilitÃ©. Lâ€™inox se caractÃ©rise Ã©galement par une grande facilitÃ© de faÃ§onnage et son bel aspect brillant.
+</p>
+<p>Pour un projet de conception dâ€™<strong>enseigne publicitaire de boutique</strong> sur-mesure, faites appel au savoir-faire de notre entreprise. Nous serons en mesure de vous livrer dans les meilleurs dÃ©lais. PUB INDUSTRIE est rÃ©fÃ©rence dâ€™expÃ©rience, de rÃ©activitÃ©, de qualitÃ© mais aussi de forte technicitÃ©. Pour plus de renseignements, ou pour une demande de devis personnalisÃ©. 
+</p>
+
+</div>
+<div class='enseigne-image-wrapper'><img src='' alt='<span class="text-main">Enseigne</span>
+
+                                        
+                                            dâ€™entreprise
+
+                                        
+                                            en
+
+                                        
+                                            inox
+
+                                        
+                                            perforÃ©
+
+                                        
+                                            et
+
+                                        
+                                            plexiglas' class='enseigne-image'></div>
+</div>
+</div>
+<div class='enseigne-row row-two'>
+<div class='enseigne-container'>
+<div class='enseigne-image-wrapper'><img src='https://pub-industrie.com/img/post/166998288430143.png' alt='Enseigne publicitaire leds' class='enseigne-image'></div>
+<div class='enseigne-text'>
+<h2>Enseigne publicitaire leds</h2>
+<p>En qualitÃ© dâ€™entreprise spÃ©cialisÃ©e dans la crÃ©ation dâ€™enseigne publicitaire, nous proposons notre service de conception, de fabrication et de pose dâ€™<strong>enseigne lumineuse Ã  leds</strong> au Maroc. Faites passer Ã  vos clients ou au grand public, un message saisissant dans un cadre artistique par excellence. </p>
+<p>
+PUB INDUSTRIE vous offre la possibilitÃ© de donner libre cours Ã  votre imagination ; GrÃ¢ce Ã  une Ã©quipe de <strong>spÃ©cialistes dâ€™enseigne publicitaire</strong> chevronnÃ©e, nous sommes en mesure de fabriquer des enseignes de diffÃ©rentes dimensions. Un Ã©ventail de couleurs, de sÃ©rie de mÃ©taux ainsi que de dÃ©coupe personnalisÃ©e sont Ã  votre disposition. 
+</p>
+<p>Notre entreprise Ã©tudie minutieusement votre projet, et vous conseille sur la solution publicitaire la plus adÃ©quate Ã  votre activitÃ©. Notre savoir-faire, nous permet dâ€™assembler diffÃ©rents types de matÃ©riaux avec des techniques performantes et design.
+</p>
+
+</div>
+</div>
+</div>
+<div class='enseigne-row row-three'>
+<div class='enseigne-container'>
+<div class='enseigne-text'>
+<h2>Enseigne  en inox et pixel leds</h2>
+<p>Le pixel led est une solution idÃ©ale pour rÃ©aliser un Ã©clairage apparent et attirent. De plus, cette solution lumineuse, se compose dâ€™une panoplie de couleurs adaptÃ©e Ã  plusieurs activitÃ©s. Pour la conception dâ€™<strong>enseigne publicitaire de boutique</strong>, de restaurant ou de tout autre type de commerce, faites appel au savoir-faire de notre entreprise.
+</p>
+<p>Les Ã©clairages led pour les enseignes publicitaires sont rÃ©sistants aux chocs, aux intempÃ©ries ainsi quâ€™aux vibrations. Ils figurent une excellente solution de communication pour lâ€™intÃ©rieur comme pour lâ€™extÃ©rieur. 
+</p>
+<p>PUB INDUSTRIE dispose dâ€™une Ã©quipe de professionnels qualifiÃ©e, capable de vous rÃ©aliser une <strong>enseigne publicitaire lumineuse Ã  leds</strong> sur-mesure Ã  vos mesures. Notre entreprise collabore dans le respect des normes de la qualitÃ© et de la sÃ©curitÃ© en vigueur. 
+</p>
+<p>Chaque Ã©lÃ©ment de votre enseigne publicitaire est Ã©tudiÃ© avant dâ€™Ãªtre posÃ© sur place. Le but est de vous rÃ©aliser une <strong>publicitÃ© lumineuse</strong> Ã  la hauteur de votre image.  
+</p>
+
+</div>
+<div class='enseigne-image-wrapper'><img src='https://pub-industrie.com/img/post/166998357118562.png' alt='Enseigne  en inox et pixel leds' class='enseigne-image'></div>
+</div>
+</div>
+<div class='enseigne-row row-four'>
+<div class='enseigne-container'>
+<div class='enseigne-image-wrapper'><img src='https://pub-industrie.com/img/post/166998614920465.png' alt='<span class="text-main border-text-black">Enseignes</span>
+
+                                        
+                                            publicitaires
+
+                                        
+                                            lumineuses
+
+                                        
+                                            en
+
+                                        
+                                            nÃ©on' class='enseigne-image'></div>
+<div class='enseigne-text'>
+<h2><span class="text-main border-text-black">Enseignes</span>
+
+                                        
+                                            publicitaires
+
+                                        
+                                            lumineuses
+
+                                        
+                                            en
+
+                                        
+                                            nÃ©on</h2>
+<p>Lâ€™<strong>enseigne en nÃ©on</strong> est caractÃ©risÃ©e par son fort impact sur la clientÃ¨le. Pour se faire remarquer tout crÃ©ant un esprit design dÃ©contractÃ©, cette solution sera idÃ©ale pour vous ! Le nÃ©on personnalisÃ© est Ã©galement utilisÃ© en dÃ©coration dâ€™intÃ©rieur sur-mesure. 
+</p>
+<p>Cette technologie se marie idÃ©alement avec le monde des <strong>enseignes publicitaires de restaurant</strong> de bars, ou encore de commerce, de mode, de dÃ©coration et de design au Maroc. Le nÃ©on vous offre la possibilitÃ© de crÃ©er et dâ€™innover grÃ¢ce Ã  sa variation de couleurs et de formes. 
+</p>
+<p>Notre entreprise spÃ©cialisÃ©e en la matiÃ¨re, et via une Ã©quipe qualifiÃ©e de designers et dâ€™artisans, vous accompagnera tout au long des travaux. Et cela, depuis la conception, la fabrication, lâ€™installation et mÃªme le dÃ©pannage de votre <strong>enseigne publicitaire nÃ©on Marrakech</strong>. Pour plus de renseignements, PUB INDUSTRIE est Ã  votre Ã©coute ! </p>
+
+</div>
+</div>
+</div>
+
+</div>
+<footer class="site-footer">
+
+    <div class="footer-inner">
+
+        <div class="footer-grid">
+
+            <div class="footer-block contact-block">
+
+                <h3 class="footer-title">
+                    Commencer<br>
+                    votre projet<br>
+                    <span>tout de suite</span>
+                </h3>
+
+                <ul class="footer-contact-list">
+                    <li>
+                        <a href="tel:+2125">â˜Ž +212 </a>
+                    </li>
+                    <li>
+                        <a href="tel:+2120676487566">âœ† +212 676 487 566</a>
+                    </li>
+                    <li>
+                        <a href="mailto:expograph@gmail.com">âœ‰ expograph@gmail.com</a>
+                    </li>
+                </ul>
+
+                <div class="map-box">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3967.687466252411!2d-1.9402769000000004!3d34.703443!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd78636be90cc269%3A0xe4fa65782a6ea741!2sExpoGraph%20%7C%20Panneaux%20Publicitaires%203D%20Oujda!5e1!3m2!1sfr!2sma!4v1787654601787!5m2!1sfr!2sma"
+                     width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" 
+                     referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                </div>
+
+            </div>
+
+            <div class="footer-block info-block">
+
+                <h3 class="arabic-title">ØµÙ†Ø§Ø¹Ø© Ø§Ù„Ø¥Ø´Ù‡Ø§Ø± ÙÙ† ÙˆØ§Ø¨Ø¯Ø§Ø¹</h3>
+
+                <div class="info-columns">
+
+                    <div class="info-column">
+                        <h4>Horaires</h4>
+                        <div class="hours-list">
+                            <p>Lundi au vendredi</p>
+                            <span>09:00 Ã  13:00</span>
+                            <span>14:00 Ã  18:00</span>
+                            <p>Samedi</p>
+                            <span>09:00 Ã  13:00</span>
+                            <p>Dimanche</p>
+                            <span>FermÃ©</span>
+                        </div>
+                    </div>
+
+                    <div class="info-column">
+                        <h4>Menu</h4>
+                        <ul class="footer-menu">
+                            <li><a href="#">Qui-sommes nous?</a></li>
+                            <li><a href="#">RÃ©alisations</a></li>
+                            <li><a href="#">Palissades de chantier</a></li>
+                            <li><a href="#">PLV et supports</a></li>
+                            <li><a href="#">Blog</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="info-column">
+                        <h4>Adresse</h4>
+                        <p>
+                            2eme Etg NÂ°03, NÂ°06 Rue Abou Obeida Ibn Al Jarrah<br>
+                            Oujda 60000.
+                        </p>
+                    </div>
+
+                    <div class="info-column">
+                        <h4>LÃ©gale</h4>
+                        <ul class="footer-menu">
+                            <li><a href="#">Politique de confidentialitÃ©</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="footer-block sketch-block">
+                <div class="sketch-plate">
+                    <div class="sketch-mark">
+                        <img src="https://pub-industrie.com/img/main/Sketch.svg" alt="Art graphic">
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-block form-block">
+
+                <h3>Vous avez un projet<br>contactez nous tout de suite</h3>
+
+                <form class="contact-form">
+                    <input type="text" placeholder="Votre nom et prÃ©nom*">
+                    <input type="tel" placeholder="Votre numÃ©ro de tÃ©lÃ©phone*">
+                    <input type="email" placeholder="Votre Email">
+                    <textarea rows="5" placeholder="Votre message"></textarea>
+                    <button type="submit">Envoyer</button>
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+
+        <div class="social-row">
+            <a href="#" aria-label="Facebook">f</a>
+            <a href="#" aria-label="Pinterest">P</a>
+            <a href="#" aria-label="Instagram">â—Ž</a>
+            <a href="#" aria-label="YouTube">â—‰</a>
+            <a href="#" aria-label="LinkedIn">in</a>
+            <a href="#" aria-label="Quora">Q</a>
+        </div>
+
+        <p>
+            Les marques dÃ©posÃ©es sont la propriÃ©tÃ© de leurs propriÃ©taires respectifs.<br>
+            Â© 2008-2026 Pub industrie.
+        </p>
+
+    </div>
+
+</footer>
+
+<script>
+    const hamburger = document.querySelector('.hamburger');
+    const navList = document.querySelector('.nav-list');
+    const menuItems = document.querySelectorAll('.nav-item.has-submenu');
+    const navLinks = document.querySelectorAll('.nav-link:not(.menu-trigger)');
+
+    let isMobile = window.innerWidth <= 768;
+
+    // Update mobile status on resize
+    window.addEventListener('resize', () => {
+        isMobile = window.innerWidth <= 768;
+        if (window.innerWidth > 768) {
+            navList.classList.remove('mobile-open');
+            hamburger.classList.remove('active');
+        }
+    });
+
+    // Hamburger menu toggle for mobile
+    if (hamburger) {
+        hamburger.addEventListener('click', function (event) {
+            event.stopPropagation();
+            hamburger.classList.toggle('active');
+            navList.classList.toggle('mobile-open');
+        });
+    }
+
+    // Handle submenu toggles
+    menuItems.forEach(item => {
+        const trigger = item.querySelector('.menu-trigger');
+        if (!trigger) return;
+
+        trigger.addEventListener('click', function (event) {
+            event.preventDefault();
+            event.stopPropagation();
+
+            if (isMobile) {
+                // Mobile: toggle this menu only
+                item.classList.toggle('open');
+            } else {
+                // Desktop: close other menus
+                const isOpen = item.classList.contains('open');
+                menuItems.forEach(menuItem => {
+                    menuItem.classList.remove('open');
+                });
+                if (!isOpen) {
+                    item.classList.add('open');
+                }
+            }
+        });
+    });
+
+    // Close menus when clicking outside
+    document.addEventListener('click', function (event) {
+        if (!event.target.closest('.navbar')) {
+            if (isMobile) {
+                navList.classList.remove('mobile-open');
+                hamburger.classList.remove('active');
+            }
+            menuItems.forEach(item => item.classList.remove('open'));
+        }
+    });
+
+    // Close mobile menu when a link is clicked
+    navLinks.forEach(link => {
+        link.addEventListener('click', function () {
+            if (isMobile) {
+                navList.classList.remove('mobile-open');
+                hamburger.classList.remove('active');
+            }
+        });
+    });
+</script>
+
+<script>
+    window.addEventListener('load', function () {
+        window.setTimeout(function () {
+            document.body.classList.add('page-loaded');
+            window.setTimeout(function () {
+                document.body.classList.add('page-animations-started');
+            }, 600);
+        }, 3000);
+    });
+</script>
+
+</body>
+</html>
+
+
